@@ -1,8 +1,7 @@
 [
     {
         "type": "text",
-        "text": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel",
-        "text_level": 1
+        "text": "Co-precipitation mechanism of Cu-rich phase and κ-carbide precipitates in Fe-28Mn-10Al-1C-3Cu austenitic low-density steel"
     },
     {
         "type": "text",
@@ -14,8 +13,7 @@
     },
     {
         "type": "text",
-        "text": "AR TI CLE I N F O",
-        "text_level": 1
+        "text": "AR TI CLE I N F O"
     },
     {
         "type": "text",
@@ -23,8 +21,7 @@
     },
     {
         "type": "text",
-        "text": "A B S T R A C T",
-        "text_level": 1
+        "text": "A B S T R A C T"
     },
     {
         "type": "text",
@@ -32,8 +29,7 @@
     },
     {
         "type": "text",
-        "text": "1. Introduction",
-        "text_level": 1
+        "text": "1. Introduction"
     },
     {
         "type": "text",
@@ -41,8 +37,7 @@
     },
     {
         "type": "text",
-        "text": "2. Materials and methods",
-        "text_level": 1
+        "text": "2. Materials and methods"
     },
     {
         "type": "text",
@@ -50,8 +45,7 @@
     },
     {
         "type": "text",
-        "text": "3. Results and discussion",
-        "text_level": 1
+        "text": "3. Results and discussion"
     },
     {
         "type": "text",
@@ -82,8 +76,7 @@
     {
         "type": "equation",
         "img_path": "images/e7618dff5ec8b5ffca7ef2cfa422d94d3a089fd591e205865fad7caa7d0989ae.jpg",
-        "text": "$$\n\\delta = \\frac { \\left| a _ { 0 } - a _ { 1 } \\right| } { a _ { 0 } }\n$$",
-        "text_format": "latex"
+        "text": "$$\n\\delta = \\frac { \\left| a _ { 0 } - a _ { 1 } \\right| } { a _ { 0 } }\n$$"
     },
     {
         "type": "text",
@@ -100,8 +93,7 @@
     {
         "type": "equation",
         "img_path": "images/7f1629bf23ea154a6cc8a4510311dfc80da16386262b25c3684e06ebdf3e20b9.jpg",
-        "text": "$$\n0 . 2 0 8 ( w t . \\mathcal { Y } _ { \\delta } C ) + 0 . 0 9 8 ( w t . \\mathcal { Y } _ { \\delta } A l ) = 1 - 0 . 0 0 5 4 ( w t . \\mathcal { Y } _ { \\delta } M n )\n$$",
-        "text_format": "latex"
+        "text": "$$\n0 . 2 0 8 ( w t . \\mathcal { Y } _ { \\delta } C ) + 0 . 0 9 8 ( w t . \\mathcal { Y } _ { \\delta } A l ) = 1 - 0 . 0 0 5 4 ( w t . \\mathcal { Y } _ { \\delta } M n )\n$$"
     },
     {
         "type": "text",
@@ -113,8 +105,7 @@
     },
     {
         "type": "text",
-        "text": "4. Conclusion",
-        "text_level": 1
+        "text": "4. Conclusion"
     },
     {
         "type": "text",
@@ -122,8 +113,7 @@
     },
     {
         "type": "text",
-        "text": "CRediT authorship contribution statement",
-        "text_level": 1
+        "text": "CRediT authorship contribution statement"
     },
     {
         "type": "text",
@@ -131,8 +121,7 @@
     },
     {
         "type": "text",
-        "text": "Declaration of competing interest",
-        "text_level": 1
+        "text": "Declaration of competing interest"
     },
     {
         "type": "text",
@@ -140,8 +129,7 @@
     },
     {
         "type": "text",
-        "text": "Data availability",
-        "text_level": 1
+        "text": "Data availability"
     },
     {
         "type": "text",
@@ -149,8 +137,7 @@
     },
     {
         "type": "text",
-        "text": "Acknowledgements",
-        "text_level": 1
+        "text": "Acknowledgements"
     },
     {
         "type": "text",

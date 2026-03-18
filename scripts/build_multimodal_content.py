@@ -9,6 +9,7 @@
 
 from __future__ import annotations
 
+import base64
 import json
 import logging
 from pathlib import Path
@@ -32,14 +33,29 @@ TYPE_EQUATION = "equation"
 
 
 def _get_str(value: Any, default: str = "") -> str:
+    """安全地获取字符串值，处理 None 和非字符串类型"""
     if value is None:
         return default
     return value.strip() if isinstance(value, str) else default
 
 
 def _get_img_path(block: Dict[str, Any]) -> str:
+    """从块中获取图片路径"""
     path = block.get("img_path") or block.get("image_path") or ""
     return _get_str(path)
+
+
+def encode_image(image_path: Path) -> str:
+    """将图片转换为 base64 编码
+    
+    Args:
+        image_path: 图片文件路径
+        
+    Returns:
+        base64 编码的字符串
+    """
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode("utf-8")
 
 
 def find_original_content_list_path(cleaned_filename: str) -> Optional[Path]:
@@ -71,6 +87,40 @@ def resolve_image_path(img_path: str, base_dir: Optional[Path]) -> Optional[Path
     return None
 
 
+def _add_image_block(
+    api_content: List[Dict[str, Any]],
+    resolved_path: Optional[Path],
+    base_dir: Optional[Path],
+    include_base64: bool,
+    text_blocks: List[str],
+) -> None:
+    """
+    添加图片块到 api_content。
+    
+    Args:
+        api_content: 目标内容列表
+        resolved_path: 解析后的图片路径
+        base_dir: 基准目录，用于计算相对路径
+        include_base64: 是否转换为 base64
+        text_blocks: 需要添加的文本块列表（如 caption、table_caption 等）
+    """
+    if include_base64 and resolved_path and resolved_path.exists():
+        b64 = encode_image(resolved_path)
+        api_content.append({
+            "type": "image_url",
+            "image_url": {"url": f"data:image/jpeg;base64,{b64}"},
+        })
+    elif resolved_path:
+        api_content.append({
+            "type": "image_url",
+            "image_url": {"url": str(resolved_path)},
+        })
+    
+    for text in text_blocks:
+        if text:
+            api_content.append({"type": "text", "text": text})
+
+
 def build_content_for_api(
     content_list: List[Dict[str, Any]],
     base_dir: Optional[Path] = None,
@@ -80,17 +130,25 @@ def build_content_for_api(
     """
     将清洗后的 content 列表转换为多模态 API 所需的 content 格式。
 
-    - text -> {"type": "text", "text": "..."}
-    - image -> 图片块（含可选 caption）；若 include_base64 则内联 base64，否则用 img_path_resolved）
-    - table -> 同 image，并附加 table_caption / table_footnote 为文本
-    - equation -> 同 image，并附加公式 text 为文本
+    支持的块类型：
+    - text: {"type": "text", "text": "..."}
+    - image: 图片块（含可选 caption）
+    - table: 表格块（含 table_caption / table_footnote）
+    - equation: 公式块（含公式 text）
 
-    当 include_base64=False 时，图片类块保存为：
-    {"type": "image", "img_path_resolved": "<绝对路径>", "caption": "..." 等}，
-    便于后续调用 API 时再编码为 base64，避免 JSON 过大。
+    Args:
+        content_list: 清洗后的内容列表
+        base_dir: 原始 content_list 所在目录（用于解析相对路径）
+        include_base64: 是否将图片转为 base64 编码（默认 False，仅保存路径）
+
+    Returns:
+        API 所需的 content 格式列表
+        
+    Note:
+        当 include_base64=False 时，图片类块保存为：
+        {"type": "image_url", "image_url": {"url": "<绝对路径>"}}
+        便于后续调用 API 时再编码为 base64，避免 JSON 过大。
     """
-    import base64
-
     api_content: List[Dict[str, Any]] = []
 
     for item in content_list:
@@ -106,22 +164,8 @@ def build_content_for_api(
             img_path = _get_img_path(item)
             resolved = resolve_image_path(img_path, base_dir) if img_path else None
             caption = _get_str(item.get("caption"))
-
-            if include_base64 and resolved and resolved.exists():
-                with open(resolved, "rb") as f:
-                    b64 = base64.b64encode(f.read()).decode("utf-8")
-                api_content.append({
-                    "type": "image_url",
-                    "image_url": {"url": f"data:image/jpeg;base64,{b64}"},
-                })
-                if caption:
-                    api_content.append({"type": "text", "text": f"[图注] {caption}"})
-            else:
-                api_content.append({
-                    "type": "image",
-                    "img_path_resolved": str(resolved) if resolved else img_path or "",
-                    **({"caption": caption} if caption else {}),
-                })
+            text_blocks = [f"[caption] {caption}"] if caption else []
+            _add_image_block(api_content, resolved, base_dir, include_base64, text_blocks)
             continue
 
         if block_type == TYPE_TABLE:
@@ -131,50 +175,22 @@ def build_content_for_api(
             fn_raw = item.get("table_footnote") or []
             cap_text = " ".join(cap_raw).strip() if isinstance(cap_raw, list) else _get_str(cap_raw)
             fn_text = " ".join(fn_raw).strip() if isinstance(fn_raw, list) else _get_str(fn_raw)
-
-            if include_base64 and resolved and resolved.exists():
-                with open(resolved, "rb") as f:
-                    b64 = base64.b64encode(f.read()).decode("utf-8")
-                api_content.append({
-                    "type": "image_url",
-                    "image_url": {"url": f"data:image/jpeg;base64,{b64}"},
-                })
-                if cap_text:
-                    api_content.append({"type": "text", "text": f"[表题] {cap_text}"})
-                if fn_text:
-                    api_content.append({"type": "text", "text": f"[表注] {fn_text}"})
-            else:
-                api_content.append({
-                    "type": "image",
-                    "img_path_resolved": str(resolved) if resolved else img_path or "",
-                    **({"table_caption": cap_text} if cap_text else {}),
-                    **({"table_footnote": fn_text} if fn_text else {}),
-                })
+            text_blocks = []
+            if cap_text:
+                text_blocks.append(f"[caption] {cap_text}")
+            if fn_text:
+                text_blocks.append(f"[footnote] {fn_text}")
+            _add_image_block(api_content, resolved, base_dir, include_base64, text_blocks)
             continue
 
         if block_type == TYPE_EQUATION:
             img_path = _get_img_path(item)
             resolved = resolve_image_path(img_path, base_dir) if img_path else None
             eq_text = _get_str(item.get("text"))
-
-            if include_base64 and resolved and resolved.exists():
-                with open(resolved, "rb") as f:
-                    b64 = base64.b64encode(f.read()).decode("utf-8")
-                api_content.append({
-                    "type": "image_url",
-                    "image_url": {"url": f"data:image/jpeg;base64,{b64}"},
-                })
-                if eq_text:
-                    api_content.append({"type": "text", "text": f"[公式] {eq_text}"})
-            else:
-                api_content.append({
-                    "type": "image",
-                    "img_path_resolved": str(resolved) if resolved else img_path or "",
-                    **({"text": eq_text} if eq_text else {}),
-                })
+            text_blocks = [f"[equation] {eq_text}"] if eq_text else []
+            _add_image_block(api_content, resolved, base_dir, include_base64, text_blocks)
             continue
 
-        # 未知类型：当作纯文本若有 text 则保留
         text = _get_str(item.get("text"))
         if text:
             api_content.append({"type": "text", "text": text})
@@ -194,7 +210,7 @@ def build_one_file(
     Args:
         input_path: 清洗后的 JSON 路径（通常在 input_cleaned 下）
         output_dir: 输出目录
-        include_base64: 是否将图片转为 base64 写入（默认 False，仅写路径，便于小文件）
+        include_base64: 是否将图片转为 base64 写入（默认 False，仅写绝对路径，便于小文件）
 
     Returns:
         输出文件路径；失败返回 None
@@ -242,7 +258,7 @@ def build_all(
     Args:
         input_dir: 清洗结果目录，默认 datasets/input_cleaned
         output_dir: 多模态 content 输出目录，默认 datasets/multimodal_content
-        include_base64: 是否在 JSON 中内联图片 base64
+        include_base64: 是否在 JSON 中内联图片 base64（默认 False，使用相对路径）
 
     Returns:
         成功写入的输出文件路径列表

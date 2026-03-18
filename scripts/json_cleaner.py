@@ -23,7 +23,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 PAPER_PARSERED_DIR = PROJECT_ROOT / "datasets" / "paper_parsered"
 INPUT_CLEANED_DIR = PROJECT_ROOT / "datasets" / "input_cleaned"
 
-DEFAULT_FIELDS_TO_REMOVE = ["bbox", "page_idx"]
+DEFAULT_FIELDS_TO_REMOVE = ["bbox", "page_idx", "text_level", "text_format"]
 
 # 块类型
 TYPE_TEXT = "text"
@@ -68,18 +68,14 @@ def _is_references_heading(block: Dict[str, Any]) -> bool:
 
 def _clean_text_block(block: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     """
-    清洗文本块：仅保留 type / text / text_level。
+    清洗文本块：仅保留 type / text。
     空文本返回 None（References 标题由上层在循环中截断）。
     """
     text = _get_str(block.get("text"))
     if not text:
         return None
 
-    out: Dict[str, Any] = {"type": TYPE_TEXT, "text": text}
-    level = block.get("text_level")
-    if level is not None:
-        out["text_level"] = level
-    return out
+    return {"type": TYPE_TEXT, "text": text}
 
 
 def _clean_image_block(block: Dict[str, Any]) -> Dict[str, Any]:
@@ -98,16 +94,13 @@ def _clean_image_block(block: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def _clean_equation_block(block: Dict[str, Any]) -> Dict[str, Any]:
-    """清洗公式块：保留 type、img_path、可选 text（latex）、text_format。"""
+    """清洗公式块：保留 type、img_path、可选 text（latex）。"""
     img_path = _get_img_path(block)
     eq_text = _get_str(block.get("text"))
-    text_format = block.get("text_format")
 
     out: Dict[str, Any] = {"type": TYPE_EQUATION, "img_path": img_path}
     if eq_text:
         out["text"] = eq_text
-    if text_format:
-        out["text_format"] = text_format
     return out
 
 

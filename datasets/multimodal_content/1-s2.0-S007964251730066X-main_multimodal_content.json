@@ -140,10 +140,18 @@
     "text": "In this paper, the recent progress on the development of the Fe-Mn-Al-C wrought sheet products, which are of particular importance in the automotive industry, is critically reviewed. The physical and mechanical properties relevant for automotive applications for the individual classes of these low-density steels are discussed. The metallurgical principles, microstructural evolutions through the processing routes and the related mechanical properties of various lightweight steels have been closely examined. Different strengthening and ductility-enhancing mechanisms operative in lowdensity steels, such as precipitation hardening, solid solution strengthening, transformation induced plasticity (TRIP), twinning induced plasticity (TWIP), shear band induced plasticity (SIP), microband induced plasticity (MBIP) and dynamic slip band refinement (DSBR), are highlighted as well. Drawbacks and processing issues hindering the successful possibility of mass production of these steels are presented. Finally, some future directions of research on low-density steels have been proposed."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/155c3de1d0014da92252d0330b197327a55ee7e2dd9cfd0c0ba101593097b7d9.jpg",
-    "table_caption": "Table 1 The development and applications of Fe-Mn-Al-C steels.",
-    "table_footnote": "a All the alloy chemistries in this paper are given in wt% unless otherwise mentioned."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/155c3de1d0014da92252d0330b197327a55ee7e2dd9cfd0c0ba101593097b7d9.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Table 1 The development and applications of Fe-Mn-Al-C steels."
+  },
+  {
+    "type": "text",
+    "text": "[footnote] a All the alloy chemistries in this paper are given in wt% unless otherwise mentioned."
   },
   {
     "type": "text",
@@ -166,23 +174,38 @@
     "text": "Austenitic steels have a higher density $( 8 . 1 5 \\mathrm { g } / \\mathrm { c m } ^ { 3 }$ for $\\gamma \\cdot$ -Fe vs. $7 . 8 7 \\mathrm { g } / \\mathrm { c m } ^ { 3 }$ for $\\pmb { \\alpha }$ -Fe) and a lower elastic modulus (195 GPa vs. 207 GPa) than ferritic steels. The increase in the Al content and the ferrite fraction will decrease the mass density due to the smaller atomic weight of Al compared to Fe as well as the difference in atomic density between the austenite (FCC) and ferrite (BCC) structures in steels [24–26]. The overall density reduction of the coexisting austenitic and ferritic $\\mathrm { F e } (  { \\mathrm { M n } } ,  { \\mathrm { A l } } )$ solid solutions was analysed, based upon the combined effect of the lattice dilatation and the average molar mass of the alloys. By a linear combination of the influences from each element, the density of Fe-Al ferritic steels and Fe-Mn-Al-C austenitic alloys can be formulated as [2,24]:"
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/288d885bbfb23e63739236e7eaec363e7d25a78ed26bd7a883e259f6c1951704.jpg",
-    "text": "$$\n\\rho _ { f e r r i t i c } ~ ( \\mathbf { g } / \\mathbf { c m } ^ { 3 } ) = 7 . 8 7 4 - 0 . 0 9 8 ~ ( \\mathbf { w t \\% A l } )\n$$"
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/288d885bbfb23e63739236e7eaec363e7d25a78ed26bd7a883e259f6c1951704.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/8bbc31f31954fc4a2e1cff1cb2fe79767b086a6ad870b3ae157c2bd1f621bc3c.jpg",
-    "text": "$$\n\\rho _ { a u s t e n i t i c } \\ ( { \\bf g } / { \\bf c m } ^ { 3 } ) = 8 . 1 5 - 0 . 1 0 1 \\ ( \\mathrm { w t \\% A l } ) - 0 . 4 1 \\ ( \\mathrm { w t \\% C } ) - 0 . 0 0 8 5 \\ ( \\mathrm { w t \\% M n } )\n$$"
+    "type": "text",
+    "text": "[equation] $$\n\\rho _ { f e r r i t i c } ~ ( \\mathbf { g } / \\mathbf { c m } ^ { 3 } ) = 7 . 8 7 4 - 0 . 0 9 8 ~ ( \\mathbf { w t \\% A l } )\n$$"
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/8bbc31f31954fc4a2e1cff1cb2fe79767b086a6ad870b3ae157c2bd1f621bc3c.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[equation] $$\n\\rho _ { a u s t e n i t i c } \\ ( { \\bf g } / { \\bf c m } ^ { 3 } ) = 8 . 1 5 - 0 . 1 0 1 \\ ( \\mathrm { w t \\% A l } ) - 0 . 4 1 \\ ( \\mathrm { w t \\% C } ) - 0 . 0 0 8 5 \\ ( \\mathrm { w t \\% M n } )\n$$"
   },
   {
     "type": "text",
     "text": "The effectiveness of Al in density reduction is almost the same in both the ferritic and austenitic alloys, since the coefficients for Al in Eqs. (1) and (2) are nearly identical (0.098 vs 0.101). This indicates a $1 . 3 \\%$ reduction in density per $1 \\%$ Al addition. The addition of C is very effective in density reduction for austenitic low density steels. The effectiveness of C is about four times higher than that of Al."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/0f13110e1a8ceae7d07e3cfe9110ceb708d907d2200bcf6432704464de69d92c.jpg",
-    "caption": "Fig. 1. Effect of alloy elements on the physical properties of ferritic iron; (a) density reduction of ferritic iron by elements lighter than Fe [24,27]; (b) the reduction of Young’s modulus of Fe-Al steels in the annealed state as a function of Al content [24,28]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/0f13110e1a8ceae7d07e3cfe9110ceb708d907d2200bcf6432704464de69d92c.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 1. Effect of alloy elements on the physical properties of ferritic iron; (a) density reduction of ferritic iron by elements lighter than Fe [24,27]; (b) the reduction of Young’s modulus of Fe-Al steels in the annealed state as a function of Al content [24,28]."
   },
   {
     "type": "text",
@@ -201,9 +224,14 @@
     "text": "As mentioned earlier, the weight saving potential of a low density steel depends on both the Young’s modulus and density. For such purposes, materials with the highest ‘‘specific stiffness” $\\mathsf { E } ^ { \\mathrm { n } } / \\rho$ should be considered, where E is the Young’s modulus, $\\rho$ is the density and $n$ is a part dependent index. Depending on the shape of a structural part, the index varies: $n = 1$ for a tie, $n = 1 / 2$ for a beam and $n = 1 / 3$ for a panel. A comparison of the specific stiffness of a HSLA steel, a Fe-8Al ferritic steel [24], a Fe-22Mn-8Al-0.8C [5] austenitic steel and a typical 6xxx series aluminium alloy is shown in Fig. 3. It clearly shows that the specific stiffness of the low density steels is not higher than that of HSLA steels and aluminium alloys. Therefore, to save weight, low density steels have to be used for parts which are not strictly limited by the value of stiffness."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/8724d86cf7531fa00330c2a4a1b0d5446cc4cc49129de71fe8ffc46928ba7d4a.jpg",
-    "caption": "Fig. 2. The Young’s modulus of Fe-(15–28)Mn-(7–10)Al-(0.7–1.2)C steels after different processing steps (solid lines) [5] and in the as-cast state of Fe-(5–40)Mn-10Al-1C steels (dashed band) [30]. The E moduli were measured using the resonance method."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/8724d86cf7531fa00330c2a4a1b0d5446cc4cc49129de71fe8ffc46928ba7d4a.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 2. The Young’s modulus of Fe-(15–28)Mn-(7–10)Al-(0.7–1.2)C steels after different processing steps (solid lines) [5] and in the as-cast state of Fe-(5–40)Mn-10Al-1C steels (dashed band) [30]. The E moduli were measured using the resonance method."
   },
   {
     "type": "text",
@@ -218,15 +246,28 @@
     "text": "Ferritic Fe–Al low-density alloys can contain up to $5 \\%$ Mn but only a very low amount of C. This type of alloys have an elongated d-ferrite microstructure at hot working conditions and can be present as A2-disordered FeAl, B2-ordered FeAl or $\\mathsf { D O } _ { 3 }$ -ordered $\\mathsf { F e } _ { 3 } \\mathsf { A l }$ at room temperature depending on the Al content."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/7971ed00d50805232b89756643b80545a088627425af3d15435e405826b85106.jpg",
-    "caption": "Fig. 3. Comparison of the specific stiffness of Fe-8Al [24], Fe-22 Mn-8Al-0.8C [5], HSLA and aluminium 6xxx alloys."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/7971ed00d50805232b89756643b80545a088627425af3d15435e405826b85106.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/49cbbbfbd18c2539bd15c87154d4891f73b6b31e327977cbd017c448fe745c83.jpg",
-    "table_caption": "Table 2 Classification of low density steels according to hot rolled microstructures.",
-    "table_footnote": "a UTS: ultimate tensile strength; TE: total elongation."
+    "type": "text",
+    "text": "[caption] Fig. 3. Comparison of the specific stiffness of Fe-8Al [24], Fe-22 Mn-8Al-0.8C [5], HSLA and aluminium 6xxx alloys."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/49cbbbfbd18c2539bd15c87154d4891f73b6b31e327977cbd017c448fe745c83.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Table 2 Classification of low density steels according to hot rolled microstructures."
+  },
+  {
+    "type": "text",
+    "text": "[footnote] a UTS: ultimate tensile strength; TE: total elongation."
   },
   {
     "type": "text",
@@ -257,9 +298,14 @@
     "text": "Ferritic Fe-Al steels are principally based on the binary Fe-Al phase diagram. Fig. 4 shows the Fe rich part of the binary Fe-Al phase diagram according to Kubaschewski [88]. The salient features of this system are highlighted as follows:"
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/d6ac1a39be404ac09e7b6c8b885afa6f7c2d7abf35f9d20ae7852d0ad1a705e5.jpg",
-    "caption": "Fig. 4. Fe-rich part of the Fe-Al system according to Kubaschewski [88]. Phase boundaries for $\\gamma ,$ $\\propto$ (A2), FeAl (B2) and $\\mathsf { F e } _ { 3 } \\mathsf { A l }$ $\\left( \\mathrm { D O } _ { 3 } \\right)$ are shown together with the area in which the so-called K-state exists."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/d6ac1a39be404ac09e7b6c8b885afa6f7c2d7abf35f9d20ae7852d0ad1a705e5.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 4. Fe-rich part of the Fe-Al system according to Kubaschewski [88]. Phase boundaries for $\\gamma ,$ $\\propto$ (A2), FeAl (B2) and $\\mathsf { F e } _ { 3 } \\mathsf { A l }$ $\\left( \\mathrm { D O } _ { 3 } \\right)$ are shown together with the area in which the so-called K-state exists."
   },
   {
     "type": "text",
@@ -290,14 +336,24 @@
     "text": "The addition of Al to the Fe-C system has a large effect on the phase fields and phase constituent, as seen in Fig. 5c. The ranges of composition and temperature for the high temperature peritectic transformation are enlarged, which indicates that a higher level of elemental segregation (micro and macro) can occur during the solidification process. The $( \\delta + \\gamma )$ area is extended and the single $\\gamma$ phase area is shifted to the right as the temperatures and the C concentrations of the S point and the E point are increased. The $( \\gamma + \\mathsf { M } _ { 3 } C )$ area in the Fe-C system is replaced by $( \\gamma + \\kappa )$ and $( \\gamma + \\kappa + \\mathsf { M } _ { 3 } \\mathsf C )$ areas."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/1d810fc64c45257cef86de0d05301def778855c00e6d3c08426f1d2a8889ab3d.jpg",
-    "caption": "Fig. 5. The effects of Mn and Al addition on the phase constituent and the phase fields of the Fe-C system. (a) Fe-C; (b) Fe-15Mn-C; (c) Fe-7Al-C. The dashed line in Fig. 5c indicates the A2 to B2 transition temperature caused by Al addition."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/1d810fc64c45257cef86de0d05301def778855c00e6d3c08426f1d2a8889ab3d.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/33271173fd604612de75c046a35a2ae4f8c95c7fe47db82465134f82cd434d30.jpg",
-    "caption": "Fig. 6. Unit cell of disordered $\\gamma$ (a), ordered $\\gamma \\left( \\mathrm { L } 1 _ { 2 } \\right)$ (b) and $\\kappa$ -carbide (c) structure in FCC alloys, j-carbide illustrated here is with ideal stoichiometry: Al occupies each corner, Fe and Mn are located on face centres and the C atom is placed at the centre of the unit cell which is also an octahedral site made by Fe and Mn [97]."
+    "type": "text",
+    "text": "[caption] Fig. 5. The effects of Mn and Al addition on the phase constituent and the phase fields of the Fe-C system. (a) Fe-C; (b) Fe-15Mn-C; (c) Fe-7Al-C. The dashed line in Fig. 5c indicates the A2 to B2 transition temperature caused by Al addition."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/33271173fd604612de75c046a35a2ae4f8c95c7fe47db82465134f82cd434d30.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 6. Unit cell of disordered $\\gamma$ (a), ordered $\\gamma \\left( \\mathrm { L } 1 _ { 2 } \\right)$ (b) and $\\kappa$ -carbide (c) structure in FCC alloys, j-carbide illustrated here is with ideal stoichiometry: Al occupies each corner, Fe and Mn are located on face centres and the C atom is placed at the centre of the unit cell which is also an octahedral site made by Fe and Mn [97]."
   },
   {
     "type": "text",
@@ -308,9 +364,14 @@
     "text": "In the Fe-Mn-Al-C phase diagrams, two important lines need to be mentioned: one is the solvus temperature of the $\\mathbf { \\kappa } \\kappa \\mathbf { \\cdot }$ -carbide formation (SE line in Fig. 5c), and the other is the disorder to order transition temperature of the ferrite (dashed line in Fig. 5c). The temperature of the solubility limit of the $\\mathbf { \\kappa } \\kappa \\mathbf { \\cdot }$ -carbide in the $\\gamma$ phase increases as the C content and/or the Al content are increased. The $\\textsf { \\textsf { X } }$ (disordered A2) transforms to the ordered B2 at a temperature below $5 0 0 ^ { \\circ } C$ and this transition temperature decreases as the C content is increased. Existence of the disorder to order transition temperature has not been confirmed yet by experiments."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/0fb8a626aed84e6f45902f3142377fe0835cfbb4baba7d20e3ab2930d1bcee49.jpg",
-    "caption": "Fig. 7. Isothermal phase sections of Fe-Mn-Al-C alloys at $9 0 0 ^ { \\circ } \\mathrm { C }$ established by experiments (individual points [102,105] and red lines [102]) and calculated from FactSage 6.4 (solid lines) and based on CALPHAD approach (dotted lines [107]), (a) $\\mathrm { M n } = 1 0 \\%$ , (b) $ { \\mathrm { M n } } = 2 0 \\%$ , (c) $ { \\mathrm { M n } } = 3 0 \\%$ . The individual points labelled by the open circle, open triangle, open square, solid square and solid diamond indicate that the experimental alloy compositions locate in the $\\gamma , ( \\gamma + \\kappa )$ $( \\gamma + \\mathsf { M } _ { 3 } C )$ , $( { \\boldsymbol { \\mathsf { X } } } + { \\boldsymbol { \\mathsf { K } } } )$ and $( \\gamma + \\alpha )$ phase fields, respectively."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/0fb8a626aed84e6f45902f3142377fe0835cfbb4baba7d20e3ab2930d1bcee49.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 7. Isothermal phase sections of Fe-Mn-Al-C alloys at $9 0 0 ^ { \\circ } \\mathrm { C }$ established by experiments (individual points [102,105] and red lines [102]) and calculated from FactSage 6.4 (solid lines) and based on CALPHAD approach (dotted lines [107]), (a) $\\mathrm { M n } = 1 0 \\%$ , (b) $ { \\mathrm { M n } } = 2 0 \\%$ , (c) $ { \\mathrm { M n } } = 3 0 \\%$ . The individual points labelled by the open circle, open triangle, open square, solid square and solid diamond indicate that the experimental alloy compositions locate in the $\\gamma , ( \\gamma + \\kappa )$ $( \\gamma + \\mathsf { M } _ { 3 } C )$ , $( { \\boldsymbol { \\mathsf { X } } } + { \\boldsymbol { \\mathsf { K } } } )$ and $( \\gamma + \\alpha )$ phase fields, respectively."
   },
   {
     "type": "text",
@@ -341,14 +402,24 @@
     "text": "Cheng et al. have conducted a systematic study of the phase transformations in two alloys, Fe-13.5Mn-6.3Al-0.78C [108], and Fe-18Mn-7Al-0.85C [109]. Fig. 8 shows the effects of temperature on the equilibrium phase proportions in these two alloys calculated from FactSage 6.4 software. The austenite decomposition reactions and phase constituents of the samples after $1 0 0 \\mathrm { h }$ annealing at different temperatures from 500 to $8 7 5 ^ { \\circ } \\mathsf C ,$ , following solution treatment at $1 1 0 0 ^ { \\circ } \\mathrm { C }$ for $^ { 1 \\mathrm { { h } } }$ , were examined and the results are summarized in Table 3."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/5db7e9c612a798471bb042c8c9e727a2d99aa46d6d314b3f3730ef8591abab07.jpg",
-    "caption": "Fig. 8. The calculated equilibrium phase proportions as a function of temperature in two alloys; (a) Fe-13.5Mn-6.3Al-0.78C [108]; (b) Fe-18Mn-7Al-0.85C [109]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/5db7e9c612a798471bb042c8c9e727a2d99aa46d6d314b3f3730ef8591abab07.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/a619cbec64df82fa3ea531bcb9133e719b327a1801716ae02e3a0ee46f30493d.jpg",
-    "table_caption": "Table 3 The constituent phases of two Fe-Mn-Al-C steels after annealing at different temperatures for $1 0 0 \\mathrm { ~ h ~ }$ in comparison with the calculations from FactSage [108,109]."
+    "type": "text",
+    "text": "[caption] Fig. 8. The calculated equilibrium phase proportions as a function of temperature in two alloys; (a) Fe-13.5Mn-6.3Al-0.78C [108]; (b) Fe-18Mn-7Al-0.85C [109]."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/a619cbec64df82fa3ea531bcb9133e719b327a1801716ae02e3a0ee46f30493d.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Table 3 The constituent phases of two Fe-Mn-Al-C steels after annealing at different temperatures for $1 0 0 \\mathrm { ~ h ~ }$ in comparison with the calculations from FactSage [108,109]."
   },
   {
     "type": "text",
@@ -367,23 +438,38 @@
     "text": "\u0004 The equilibrium phases in the Fe-Mn-Al-C system at the iron rich side may include: $\\gamma$ -austenite, $\\delta ( { \\mathfrak { a } } )$ -ferrite, $\\mathbf { \\kappa } \\kappa$ -carbide, $\\mathsf { M } _ { 3 } \\mathsf { C } ,$ $\\mathbf { M } _ { 2 3 } \\mathbf { C } _ { 6 }$ , $ { \\mathbf { M } } _ { 7 }  { \\mathbf { C } } _ { 3 }$ carbides and $\\beta \\cdot$ -Mn. These phases may coexist under conditions depending on the compositions and temperature.   \n\u0004 The addition of Al in Fe-Mn-C steels enlarges the phase field of ferrite and suppresses the $\\gamma$ single phase region.   \n\u0004 The lowest temperature that $\\gamma$ exists as a stable single phase decreases to about $3 8 6 ^ { \\circ } \\mathsf C$ as Mn is increased to $3 0 \\%$ in Fe-  \nMn-Al-C steels. Thus, the $\\gamma$ is not a stable phase at temperatures lower than $3 8 6 ^ { \\circ } \\mathsf C$ in Fe-Mn-Al-C steels with the Mn content in the range of $0 - 3 0 \\%$ .   \n\u0004 In Fe-Al-C steels, the $\\kappa$ phase is formed when Al is higher than $2 \\%$ , while in Fe-Mn-Al-C steels, the required Al content to form $\\kappa$ phase is increased to higher than $5 \\%$ when more than $2 \\%$ Mn is added. The experimental evidence by Buckholz et al. [110] supports this statement. This indicates that Mn restrains the formation of the $\\kappa$ phase and Al restrains the   \nformation of the other carbides such as $\\mathsf { M } _ { 3 } \\mathsf { C }$ and $\\mathsf { M } _ { 2 3 } \\mathsf { C } _ { 6 }$ .   \n\u0004 The formation temperature of the $\\kappa$ phase, indicating its stability, increases as the C and Al contents are increased. The solvus temperature of $\\kappa \\cdot$ -carbide decreases as Mn is increased up to $1 5 \\%$ and this does not change with further increase of Mn.   \n\u0004 As the C and Mn contents of the steels increase, the austenite region is enlarged for a given Al content. In case a singlephase austenite matrix is desired, the ferrite stabilizing effect of Al must be compensated by an increased Mn and C content.   \n\u0004 The predictions show that the disorder-order transition of BCC_A2 $( { \\boldsymbol { \\alpha } } )$ to BCC_B2 occurs when the Al content is higher than $2 \\%$ , which is lower than that obtained from the experiments, see Fig. 4. The disorder-order transition temperature increases as the Al and Mn contents are increased but decreases as the C content is increased. This indicates that the increase of the Al and Mn contents enhances the formation of ordered phases within the ferrite, while the increase of the C content restricts the formation of ordered phases.   \n\u0004 The homogeneous region of $\\gamma$ is enlarged by increasing Mn content up to $2 0 \\%$ , then shrunk by further increasing the Mn content up to $3 0 \\%$ ."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/599f64e5aac299f0b91804decb22f653dfc24c6edcae409607a2cdaf71bee817.jpg",
-    "caption": "Fig. 9. The polythermal sections of the phase diagrams of Fe-15Mn-xAl-yC alloys calculated from FactSage as a function of C for $\\mathrm { M n } = 1 5 \\%$ and various Al contents, (a) $A 1 = 4 \\%$ , (b) $A 1 = 7 \\%$ , (d) $\\mathsf { A l } = 1 0 \\%$ . The dash-dotted lines are the formation temperature of the $\\kappa$ phase; the dashed lines are the disorder to order transition temperature."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/599f64e5aac299f0b91804decb22f653dfc24c6edcae409607a2cdaf71bee817.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/47b5103ff746eb985cfdc7fa19ff5dec0378a9df30ddb348380ac3a821e83e06.jpg",
-    "caption": "Fig. 10. The polythermal sections of the phase diagrams of Fe-Mn-Al-0.85C alloys calculated from FactSage, (a) as a function of Al for $ { \\mathrm { M n } } = 2 0 \\%$ and $C = 0 . 8 5 \\%$ ; (b) as a function of Mn for $A 1 = 7 \\%$ and $C = 0 . 8 5 \\%$ . The dash-dotted lines are the formation temperature of the $\\kappa$ phase; the dashed lines are the disorder to order transition temperature."
+    "type": "text",
+    "text": "[caption] Fig. 9. The polythermal sections of the phase diagrams of Fe-15Mn-xAl-yC alloys calculated from FactSage as a function of C for $\\mathrm { M n } = 1 5 \\%$ and various Al contents, (a) $A 1 = 4 \\%$ , (b) $A 1 = 7 \\%$ , (d) $\\mathsf { A l } = 1 0 \\%$ . The dash-dotted lines are the formation temperature of the $\\kappa$ phase; the dashed lines are the disorder to order transition temperature."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/47b5103ff746eb985cfdc7fa19ff5dec0378a9df30ddb348380ac3a821e83e06.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 10. The polythermal sections of the phase diagrams of Fe-Mn-Al-0.85C alloys calculated from FactSage, (a) as a function of Al for $ { \\mathrm { M n } } = 2 0 \\%$ and $C = 0 . 8 5 \\%$ ; (b) as a function of Mn for $A 1 = 7 \\%$ and $C = 0 . 8 5 \\%$ . The dash-dotted lines are the formation temperature of the $\\kappa$ phase; the dashed lines are the disorder to order transition temperature."
   },
   {
     "type": "text",
     "text": "The thermodynamic phase diagrams demonstrate that a variety of microstructures can be obtained in Fe-Mn-Al-C steels depending on the alloys compositions and temperature. From the microstructural point of view, the alloy design criteria should be based on the absence of $\\mathbf { \\kappa } \\kappa \\mathbf { \\cdot }$ -carbides at hot working temperatures, on the prevention of coarse grain boundary precipitation of $\\mathbf { \\kappa } \\kappa$ -carbides and on the prevention of formation of the other carbides such as $\\mathsf { M } _ { 2 3 } \\mathsf { C } _ { 6 }$ and $ { \\mathrm { M } } _ { 7 }  { \\mathrm { C } } _ { 3 }$ at lower temperatures."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/7eb6e30bbde963ea8394ead2579019e47f3ab80c934bb97a00af6f1031e88f68.jpg",
-    "caption": "Fig. 11. Process variants for producing hot rolled and cold rolled austenitic Fe-Mn-Al-C steel strips. The numbers identify process routes as described in the text."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/7eb6e30bbde963ea8394ead2579019e47f3ab80c934bb97a00af6f1031e88f68.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 11. Process variants for producing hot rolled and cold rolled austenitic Fe-Mn-Al-C steel strips. The numbers identify process routes as described in the text."
   },
   {
     "type": "text",
@@ -414,9 +500,14 @@
     "text": "To obtain cold rolled products, for age-hardenable austenitic Fe-Mn-Al-C steels, the cold rolled strips are solution treated in the temperature range of $9 0 0 { - } 1 1 0 0 ^ { \\circ } { \\mathrm { C } }$ in the single austenite phase area, and then quenched in water, oil or other quench media. Subsequent aging treatments can be performed to produce precipitation hardening, as indicated by processes 3, 4 and 5 in Fig. 11. Process 3 has no isothermal holding and processes 4 and 5 are applied to maximize the age hardening effects of the $\\kappa ^ { \\prime }$ phase precipitation. The common practice for age hardening is to hold isothermally for $5 { - } 2 0 \\mathrm { h }$ in the temperature range $5 0 0 { - } 7 0 0 ^ { \\circ } \\mathrm { C }$ [1–5]. For non-age hardenable austenitic Fe-Mn-Al-C steels, after cold rolling, recovery or recrystallization annealing in the temperature range of 600 to $9 0 0 ^ { \\circ } \\mathsf C$ for a short time $\\cdot 1 { - } 5 \\mathrm { m i n } )$ can be applied to restore the ductility or to obtain the grain refinement. In this case, the continuous annealing line for producing conventional steel strips can be used [5]."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/effabcc05b6a49bf5a17b98359dae6899b06817cc07552292516464f5d092ce4.jpg",
-    "caption": "Fig. 12. The characteristics of the optical microstructures of low density steels in the hot-rolled, cold-rolled and annealed conditions."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/effabcc05b6a49bf5a17b98359dae6899b06817cc07552292516464f5d092ce4.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 12. The characteristics of the optical microstructures of low density steels in the hot-rolled, cold-rolled and annealed conditions."
   },
   {
     "type": "text",
@@ -475,14 +566,24 @@
     "text": "The sequence of the $\\kappa ^ { \\prime }$ precipitation in the austenite phase, given below, has been studied and can be described as follows [119–122]:"
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/5068252e23f4a522dd7f77bf20c4dd03feb1780a273e668261dd9d44f86d626a.jpg",
-    "text": "$$\n\\gamma \\to \\gamma ^ { \\prime } + \\gamma ^ { \\prime \\prime } \\to \\gamma ^ { \\prime } + ~ \\mathrm { L } 1 _ { 2 } ( \\mathrm { S R O } ) \\to \\gamma ^ { \\prime } + \\kappa ^ { \\prime }\n$$"
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/5068252e23f4a522dd7f77bf20c4dd03feb1780a273e668261dd9d44f86d626a.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/6b24b1344847443bb1c0f34ed4cc28db79f7dda763a7cfff97139c82f539ff26.jpg",
-    "caption": "Fig. 13. TTT diagram of decomposition of $\\gamma$ -solid solution in a Fe-28Mn-8.5Al-1C-1.25Si alloy during isothermal aging [116]. Area 1: spinoda decomposition; Area 2: homogeneous matrix $\\kappa ^ { \\prime }$ -carbide precipitation; Area 3: the formation of the grain boundary $\\kappa ^ { * }$ -carbide; Area 4: discontinuous reaction product of grain boundary $\\mathsf { \\Delta } \\mathsf { a } ( \\mathsf { B } 2 / \\mathsf { D } 0 _ { 3 } )$ ; Area 5: the formation of equilibrium phases."
+    "type": "text",
+    "text": "[equation] $$\n\\gamma \\to \\gamma ^ { \\prime } + \\gamma ^ { \\prime \\prime } \\to \\gamma ^ { \\prime } + ~ \\mathrm { L } 1 _ { 2 } ( \\mathrm { S R O } ) \\to \\gamma ^ { \\prime } + \\kappa ^ { \\prime }\n$$"
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/6b24b1344847443bb1c0f34ed4cc28db79f7dda763a7cfff97139c82f539ff26.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 13. TTT diagram of decomposition of $\\gamma$ -solid solution in a Fe-28Mn-8.5Al-1C-1.25Si alloy during isothermal aging [116]. Area 1: spinoda decomposition; Area 2: homogeneous matrix $\\kappa ^ { \\prime }$ -carbide precipitation; Area 3: the formation of the grain boundary $\\kappa ^ { * }$ -carbide; Area 4: discontinuous reaction product of grain boundary $\\mathsf { \\Delta } \\mathsf { a } ( \\mathsf { B } 2 / \\mathsf { D } 0 _ { 3 } )$ ; Area 5: the formation of equilibrium phases."
   },
   {
     "type": "text",
@@ -501,9 +602,14 @@
     "text": "Aging of the austenitic Fe–Mn–Al–C alloys results in a more definite precipitation of $\\kappa ^ { \\prime }$ -particles within austenite grains [1–9,73,77,78,118]. The $\\mathrm { L } ^ { \\prime } 1 _ { 2 }$ phase is observed to precipitate homogeneously in the austenite as small coherent particles at the initial stage of annealing in a Fe-18Mn-7Al-0.85C alloy when the annealing temperature is below $6 2 5 ^ { \\circ } \\mathrm { C }$ [109]. Initially the $\\kappa ^ { \\prime }$ -carbide appears cube-shaped in morphology [97,119,125]. With increasing the annealing time, the metastable $\\kappa ^ { \\prime }$ phase within the austenite matrix accumulates C and Al atoms from the surrounding carbon-lean austenite and grows upon prolonged annealing, and transforms to $\\mathbf { \\kappa } \\kappa$ -carbides. The lattice parameter of $\\kappa ^ { \\prime } \\cdot$ -carbide increases and the parent phase lattice parameter decreases and this leads to a loss of coherency and a more plate-like morphology."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/7974571eadb01bd47fde0991502e7f9b03b2edfbd0e26e25ed3d30d481f4705d.jpg",
-    "caption": "Fig. 14. Secondary electron images of a Fe-18Mn-7Al-0.85C austenitic steel, showing the growing feature of $\\kappa ^ { \\prime }$ -carbides in the austenite and the evolution of the $\\kappa ^ { * }$ -carbide in $( \\kappa + \\gamma + \\alpha )$ lamellar colonies on the austenitic grain boundaries after isothermal holding at $7 0 0 ^ { \\circ } \\mathrm { C }$ for various periods of time [122]: (a) $^ { 1 \\mathrm { h } }$ , (b) $^ { 2 5 \\mathrm { { h } } }$ (d) $1 0 0 \\mathrm { h }$ ."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/7974571eadb01bd47fde0991502e7f9b03b2edfbd0e26e25ed3d30d481f4705d.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 14. Secondary electron images of a Fe-18Mn-7Al-0.85C austenitic steel, showing the growing feature of $\\kappa ^ { \\prime }$ -carbides in the austenite and the evolution of the $\\kappa ^ { * }$ -carbide in $( \\kappa + \\gamma + \\alpha )$ lamellar colonies on the austenitic grain boundaries after isothermal holding at $7 0 0 ^ { \\circ } \\mathrm { C }$ for various periods of time [122]: (a) $^ { 1 \\mathrm { h } }$ , (b) $^ { 2 5 \\mathrm { { h } } }$ (d) $1 0 0 \\mathrm { h }$ ."
   },
   {
     "type": "text",
@@ -534,18 +640,28 @@
     "text": "As discussed in the previous sections, in the Fe–Mn–Al–C alloys having higher contents of Al $( > 7 \\% )$ or C $\\left( > 0 . 8 \\% \\right)$ , $\\kappa ^ { \\prime }$ -carbides forms even during cooling after solution treatment, which provides remarkable age hardening. However, in the results reported by Sato et al. [120], two alloys, Fe–29Mn–4.9Al–0.98C and Fe–34Mn–7.1Al–0.5C, did not produce any hardening response for aging times up to $2 0 0 0 \\mathrm { { m i n } }$ at $5 5 0 ^ { \\circ } \\mathsf C$ , No j-carbide precipitation was observed in the these alloys. Raabe et al. [9,82] reported that there was no significant increase in strength after aging treatment when Al is less than $6 \\%$ in a series of Fe-30Mn-xAl-1.2C alloys, while a significant age hardening response was found in a Fe-30Mn-8Al-1.2C alloy. The intergranular $\\mathrm { { M } } _ { 3 } \\mathrm { { C } } .$ -type carbides were observed in a $2 \\%$ Al containing steel but $\\kappa ^ { \\prime }$ -carbides precipitated in a $8 \\%$ Al steel. These results indicate that C and Al contents play an important role in the formation of $\\mathbf { \\kappa } \\kappa \\mathbf { \\cdot }$ -carbides."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/2ef6fbaef72ac54b7b9792af441030f513247b47f836df0853d131175c77b055.jpg",
-    "caption": "Fig. 15. Microstructures of a Fe-13.5Mn-6.3Al-0.78C steel after solution treatment at $1 0 0 0 ^ { \\circ } \\mathrm { C }$ followed by aging at $6 0 0 ^ { \\circ } \\mathrm { C }$ for $1 0 0 \\mathrm { h }$ [108], (a) optical microscope image showing large j-pearlite colonies along the austenite grain boundaries, (b) and (c) TEM bright field images revealing the internal portions of various $\\boldsymbol { \\kappa }$ -pearlites. C indicates $\\mathrm { M } _ { 2 3 } \\mathrm { C } _ { 6 }$ ."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/2ef6fbaef72ac54b7b9792af441030f513247b47f836df0853d131175c77b055.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 15. Microstructures of a Fe-13.5Mn-6.3Al-0.78C steel after solution treatment at $1 0 0 0 ^ { \\circ } \\mathrm { C }$ followed by aging at $6 0 0 ^ { \\circ } \\mathrm { C }$ for $1 0 0 \\mathrm { h }$ [108], (a) optical microscope image showing large j-pearlite colonies along the austenite grain boundaries, (b) and (c) TEM bright field images revealing the internal portions of various $\\boldsymbol { \\kappa }$ -pearlites. C indicates $\\mathrm { M } _ { 2 3 } \\mathrm { C } _ { 6 }$ ."
   },
   {
     "type": "text",
     "text": "The effects of the alloying elements, Al and C in particular, on the existence of both intergranular and intragranular $\\kappa$ -carbides have been studied by Huang [127] and Li [128]. Huang investigated the phase transformation behaviour in a range of compositions, Fe $- ( 2 3 - 3 1 ) \\mathrm { M n } - ( 2 - 1 0 ) \\mathsf { A l } - ( 0 . 4 - 1 . 0 ) \\mathsf { C }$ , during isothermal aging at $6 5 0 ^ { \\circ } \\mathsf C ,$ in which a single phase austenite is formed upon solution treating and quenching. For lower alloyed Fe-Mn-Al-C compositions even after long age hardening treatments at $6 5 0 ^ { \\circ } \\mathrm { C }$ for $3 6 0 \\mathrm { h }$ , no $\\kappa$ precipitation could be observed. Other carbides such as ${ \\sf M } _ { 3 } { \\sf C } _ { \\sf \\Gamma }$ , $\\mathsf { M } _ { 7 } \\mathsf { C } _ { 3 }$ or $\\mathbf { M } _ { 2 3 } \\mathbf { C } _ { 6 }$ can be formed after annealing at a lower temperature in alloys with Al content less than $5 . 5 \\%$ [127]. It was concluded that the intragranular $\\kappa ^ { \\prime }$ -carbide can precipitate only in alloys with Al and C contents higher than about $6 . 2 \\%$ and $1 . 0 \\%$ respectively, and that the intergranular $\\kappa ^ { * }$ -carbide can precipitate only in alloys with Al and C contents higher than about $5 . 5 \\%$ and $0 . 7 \\%$ , respectively. The thermodynamic calculations in Section 4.3 show that an Al content of higher than $5 \\%$ is required to form $\\kappa$ -carbide in these steels. Increasing the Al and C contents will increase the chemical driving force for the precipitation of $\\kappa$ phase, and at the same time, also increase the lattice constant of austenite $\\mathbf { 0 . 0 0 0 9 4 n m }$ per $\\% \\mathsf { A l }$ [127]) which in turn will decrease the misfit between austenite and intragranular $\\kappa ^ { \\prime }$ -carbide and thereby the coherent strain energy. Both the increase in chemical driving force and the decrease in strain energy are favourable for the precipitation of intragranular $\\kappa ^ { \\prime }$ -carbide. The lattice constant of the austenite matrix was proposed by Huang et al. [127] to serve as a simple empirical index in determining the precipitation of intragranular $\\kappa ^ { \\prime }$ -carbide. A critical lattice constant of about $0 . 3 6 7 0 \\mathrm { n m }$ was found for the austenite matrix, below which the intragranular $\\kappa ^ { \\prime }$ phase does not precipitate. Based on this critical lattice constant, a composition boundary for the precipitation of intragranular $\\kappa ^ { \\prime }$ phase in Fe-Mn-AI-C alloys was derived as:"
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/67d53e339292a40e984930123ef23d7afb95d19cf824e299239b18a0ac704e81.jpg",
-    "text": "$$\n0 . 0 9 8 \\ ( \\mathrm { w t \\% \\ A l } ) + 0 . 2 0 8 \\ ( \\mathrm { w t \\% \\ C } ) = 1 - 0 . 0 0 5 4 \\ ( \\mathrm { w t \\% \\ M n } )\n$$"
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/67d53e339292a40e984930123ef23d7afb95d19cf824e299239b18a0ac704e81.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[equation] $$\n0 . 0 9 8 \\ ( \\mathrm { w t \\% \\ A l } ) + 0 . 2 0 8 \\ ( \\mathrm { w t \\% \\ C } ) = 1 - 0 . 0 0 5 4 \\ ( \\mathrm { w t \\% \\ M n } )\n$$"
   },
   {
     "type": "text",
@@ -564,14 +680,24 @@
     "text": "(1) First range $( 4 5 0 - 6 5 0 ^ { \\circ } \\mathsf { C } _ { \\iota }$ ): When the alloy is aged within this temperature range, fine $\\kappa ^ { \\prime }$ -carbides precipitate coherently within austenite matrix. The size of $\\kappa ^ { \\prime } \\cdot$ -carbides is about $2 0 0 { - } 5 0 0 \\mathring { \\mathrm { A } }$ depending on chemical composition, aging temperature and aging time.   \n(2) Second range $( 6 5 0 - 8 0 0 ^ { \\circ } \\mathsf { C } )$ : The $\\kappa$ -carbides precipitate not only coherently within austenite matrix, but also on grain boundaries in the form of coarser particles. The higher the aging temperature, more is the quantity of the grain boundary $\\kappa ^ { * } .$ -carbides. Besides the precipitation of $\\kappa ^ { * } .$ -carbides, $\\beta$ -Mn precipitates are also observed to form on the grain boundaries through the transformation of $\\kappa  \\mathsf { \\pmb { \\mathscr { A } } } + \\mathsf { \\pmb { \\beta } } .$ -Mn when a longer annealing time is applied."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/922fddb81b368448713639d88ff7788acbee3990b53b8f2637a92a2b17c3f1a0.jpg",
-    "caption": "Fig. 16. The precipitation of intragranular $\\kappa ^ { \\prime }$ -carbide as a function of alloy compositions. The individual points labelled by the open circle, solid square and solid diamond indicate that the experimental alloy compositions locate in the $\\gamma , \\left( \\gamma + \\kappa \\right)$ and $( \\gamma + \\alpha + \\kappa )$ phase fields, respectively [8,120,127]. The solid lines are the $\\kappa$ formation boundaries predicted by Eq. (3) given in Huang et al. [127]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/922fddb81b368448713639d88ff7788acbee3990b53b8f2637a92a2b17c3f1a0.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/684c2e830bbc3ee46e66a99485d6dc7f1d6d59968c9aad0909e6d832ade454da.jpg",
-    "caption": "Fig. 17. The effects of Al and Mn contents on the solvus of $\\kappa$ phase in (a) Fe-30Mn-xAl-1C and (b) Fe-xMn-7Al-1C alloys. c: austenite; $\\kappa ^ { \\prime }$ : intragranular $\\kappa$ -carbide; $\\kappa ^ { * }$ : intergranular $\\kappa$ -carbide [128]."
+    "type": "text",
+    "text": "[caption] Fig. 16. The precipitation of intragranular $\\kappa ^ { \\prime }$ -carbide as a function of alloy compositions. The individual points labelled by the open circle, solid square and solid diamond indicate that the experimental alloy compositions locate in the $\\gamma , \\left( \\gamma + \\kappa \\right)$ and $( \\gamma + \\alpha + \\kappa )$ phase fields, respectively [8,120,127]. The solid lines are the $\\kappa$ formation boundaries predicted by Eq. (3) given in Huang et al. [127]."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/684c2e830bbc3ee46e66a99485d6dc7f1d6d59968c9aad0909e6d832ade454da.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 17. The effects of Al and Mn contents on the solvus of $\\kappa$ phase in (a) Fe-30Mn-xAl-1C and (b) Fe-xMn-7Al-1C alloys. c: austenite; $\\kappa ^ { \\prime }$ : intragranular $\\kappa$ -carbide; $\\kappa ^ { * }$ : intergranular $\\kappa$ -carbide [128]."
   },
   {
     "type": "text",
@@ -586,9 +712,14 @@
     "text": "In addition to the $\\kappa$ -precipitation, the $\\pmb { \\alpha }$ -precipitation may occur during annealing after solution treatment, depending on the steel composition and the annealing temperature. This is usually observed as fine stringers along the $\\gamma$ -austenitic grain boundaries [109,122]. The $\\pmb { \\alpha }$ -precipitates can also be formed along the shear bands or the twin boundaries [22]. In the solution treated fully austenitic microstructure, the $\\pmb { \\alpha }$ -precipitates on $\\gamma$ grain boundaries are initially coherent with one of the austenite grains, with a Kurdjumov-Sachs orientation relationship, $( 1 1 1 ) _ { \\gamma } / / ( 1 1 0 ) _ { \\alpha }$ and $[ 1 0 1 ] _ { \\gamma } / / [ 1 1 1 ] _ { \\alpha }$ [135]. These precipitates, however, loose coherency upon coarsening as the aging time is increased [109,122]. In duplex $( \\delta + \\gamma )$ microstructures, the $\\pmb { \\alpha }$ -ferrite forms preferentially on the existing d-ferrite [56]. The $\\textsf { \\textsf { X } }$ ferrite may transform to B2 or $\\mathsf { D O } _ { 3 }$ structures at lower temperatures [3,122] due to the high Al contents. In a Fe-8.0Al-29.0Mn-0.90C-1.5Si steel, some discrete particles having a mixture of $\\left( \\mathsf { a } + \\mathsf { D } 0 _ { 3 } \\right)$ phases are formed along the $\\gamma$ grain boundaries by an ordering transition during quenching [138]. In a Ni alloyed Fe–15Mn–10Al-0.86C–5Ni steel [22], it was observed that the B2 phase (transformed from $\\pmb { \\alpha }$ -ferrite) is stronger than the austenite matrix and these particles can be utilised to increase the strength of steels as long as the size of the B2 particles can be reduced to nanoscale. Fig. 18 shows the precipitation of B2 particles during annealing of a cold rolled Fe– 15Mn–10Al-0.86C–5Ni steel [22,61]. The strategy to be adopted to produce nanoscale B2 precipitates is not yet clear as for $\\kappa$ -precipitates."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/630440da9423c58a63a75a71c3ca7e01868050c7cb1ca7277ce333c114ca47eb.jpg",
-    "caption": "Fig. 18. (a) The microstructure of a Fe–15Mn–10Al-0.86C–5Ni steel after a $7 0 \\%$ thickness reduction in cold rolling and annealing at $9 0 0 ^ { \\circ } C$ for $2 \\mathrm { { m i n } }$ . and (b) Schematic illustrating the formation mechanism of B2 precipitates. Area (1) in (a): B2 stringer bands transformed from d ferrite, which is produced from liquid; area (2) in (a): B2 particles transformed from $\\propto$ precipitates at $\\gamma$ grain boundaries and edges; area (3) in (a): B2 particles transformed from $\\propto$ precipitates at shear bands within a c grain [22]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/630440da9423c58a63a75a71c3ca7e01868050c7cb1ca7277ce333c114ca47eb.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 18. (a) The microstructure of a Fe–15Mn–10Al-0.86C–5Ni steel after a $7 0 \\%$ thickness reduction in cold rolling and annealing at $9 0 0 ^ { \\circ } C$ for $2 \\mathrm { { m i n } }$ . and (b) Schematic illustrating the formation mechanism of B2 precipitates. Area (1) in (a): B2 stringer bands transformed from d ferrite, which is produced from liquid; area (2) in (a): B2 particles transformed from $\\propto$ precipitates at $\\gamma$ grain boundaries and edges; area (3) in (a): B2 particles transformed from $\\propto$ precipitates at shear bands within a c grain [22]."
   },
   {
     "type": "text",
@@ -607,14 +738,24 @@
     "text": "When the amounts of C and especially Mn are relatively low, for example, in a composition with $6 \\mathrm { - } 8 \\%$ Al, $2 \\mathrm { - } 6 \\%$ Mn, 0.1– $0 . 3 \\%$ C [45–50], the decomposition temperature of the austenite into the $\\pmb { \\alpha }$ -ferrite and the $\\kappa$ -carbide is quite high, and $\\mathbf { \\kappa } \\kappa \\mathbf { \\cdot }$ -carbides can be formed even at hot working temperatures, at the interface between austenite and d-ferrite forming a shell structure surrounding the austenite [19], as shown in Fig. 19b. With increasing amount of Mn, the formation of coarse $\\kappa$ -carbides in duplex low density steels at hot working temperatures can be avoided."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/b8f94767e726db7dca222002bc5c7ae25425425d18157a63bffaa91370587143.jpg",
-    "caption": "Fig. 19. (a) Optical microstructure showing $\\propto$ -ferrite formed in the $\\gamma$ phase band (the grey areas in the embedded microstructure) during hot rolling stage in a Fe-5Mn-6Al-0.4C steel [48]; (b) SEM micrograph showing j phase formed along $\\delta / \\gamma$ boundaries during hot rolling stage in a Fe-2Mn-8Al-0.2C steel [19]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/b8f94767e726db7dca222002bc5c7ae25425425d18157a63bffaa91370587143.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/079abf8d3b71ee6978aeba06050c0891d8a14f37899db8e3a0686a95219d58ab.jpg",
-    "caption": "Fig. 20. Microstructures of the air cooled hot-rolled specimen of the Fe–9Mn–6Al–0.15C alloy [53]: (a) optical microstructure composing of partiallyrecrystallized d-ferrite (white), $\\gamma \\cdot$ -austenite (brown), and the other lath-like phases (gray); (b) SEM microgram showing the details inside the lath-like phase consisting of $\\gamma$ -austenite, a lath-like martensite $\\pmb { \\mathcal { X } } ^ { \\prime }$ , and small globular ferrite ${ \\pmb x } ^ { . }$ -particles."
+    "type": "text",
+    "text": "[caption] Fig. 19. (a) Optical microstructure showing $\\propto$ -ferrite formed in the $\\gamma$ phase band (the grey areas in the embedded microstructure) during hot rolling stage in a Fe-5Mn-6Al-0.4C steel [48]; (b) SEM micrograph showing j phase formed along $\\delta / \\gamma$ boundaries during hot rolling stage in a Fe-2Mn-8Al-0.2C steel [19]."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/079abf8d3b71ee6978aeba06050c0891d8a14f37899db8e3a0686a95219d58ab.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 20. Microstructures of the air cooled hot-rolled specimen of the Fe–9Mn–6Al–0.15C alloy [53]: (a) optical microstructure composing of partiallyrecrystallized d-ferrite (white), $\\gamma \\cdot$ -austenite (brown), and the other lath-like phases (gray); (b) SEM microgram showing the details inside the lath-like phase consisting of $\\gamma$ -austenite, a lath-like martensite $\\pmb { \\mathcal { X } } ^ { \\prime }$ , and small globular ferrite ${ \\pmb x } ^ { . }$ -particles."
   },
   {
     "type": "text",
@@ -669,9 +810,14 @@
     "text": "The solution hardening of Al in BCC iron is an important strengthening mechanism in ferritic low density steels. Aluminium is reported to create marked solid solution strengthening in ferrite causing ${ \\sim } 4 0 \\mathrm { M P a } / \\mathrm { w t \\% }$ increase in yield strength, following Suzuki’s theory of solid solution hardening of BCC alloys [24,37,38]. Fig. 21 shows the tensile properties of Fe-Al steels versus the Al concentration regarding different crystal structures, the non-ordered and ordered lattices. The yield strength of pure iron-aluminium solid solution increases with increasing Al up to $1 3 \\%$ (cd $2 2 \\mathsf { a t } . \\% )$ , then rapidly falls at $^ { 1 3 - }$ $1 5 \\%$ and remains almost constant with increasing Al further to $2 5 \\%$ . At room temperature, the total tensile elongation decreases with increasing Al. A transition from ductile fracture to brittle fracture without necking occurs in the range of $8 - 1 0 \\%$ Al."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/f33283721ea53254066037024694e498bd9532e3c34df08f7b9ec65cdae12a13.jpg",
-    "caption": "Fig. 21. (a) Tensile properties vs. Al content showing the influence of different lattice structure and the solid solution hardening effect of Al in Fe [24,37]; (b) work hardening rate measured between 1 and $1 . 5 \\%$ plastic strain as a function of Al content [38]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/f33283721ea53254066037024694e498bd9532e3c34df08f7b9ec65cdae12a13.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 21. (a) Tensile properties vs. Al content showing the influence of different lattice structure and the solid solution hardening effect of Al in Fe [24,37]; (b) work hardening rate measured between 1 and $1 . 5 \\%$ plastic strain as a function of Al content [38]."
   },
   {
     "type": "text",
@@ -714,9 +860,14 @@
     "text": "Park et al. [72] studied the effect of Al on the plastic deformation of fully austenitic Fe–22Mn–(0, 3, 6)Al–0.6C steels with the SFE in the range of $2 0 { - } 5 0 \\mathrm { m J } / \\mathrm { m } ^ { 2 }$ . The engineering stress-strain curves of these steels in the solution treated and water quenched condition are shown in Fig. 22a. The Al-free steel has a higher strain hardening rate than that of the Al-alloyed steels. In the Al-free steel, the strain hardening rate increases continuously until close to necking. In the $3 \\%$ Al steel, the strain hardening rate decreases up to a true strain of ${ \\sim } 0 . 2$ and then remains nearly constant up to necking. In the $6 \\%$ Al steel the strain hardening rate gradually decreases from the onset of plastic deformation and then rapidly decreases at high strains. The deformation of all these steels with different Al levels was dominated by planar glide before the occurrence of mechanical twinning. Planar glide becomes more evident with an increasing SFE due to suppress or delay in mechanical twinning."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/68acb421eb9c3ff42c97d135c00afb67e124b2931365c87e1a3e1692de7b8028.jpg",
-    "caption": "Fig. 22. Typical engineering stress-strain curves of austenitic and austenite based duplex steels: (a) effect of Al and C contents; (b) effect of $\\kappa ^ { \\prime } \\cdot$ -carbide and B2 intermetallic phase. Details of heat treatments of steels are described in the text."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/68acb421eb9c3ff42c97d135c00afb67e124b2931365c87e1a3e1692de7b8028.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 22. Typical engineering stress-strain curves of austenitic and austenite based duplex steels: (a) effect of Al and C contents; (b) effect of $\\kappa ^ { \\prime } \\cdot$ -carbide and B2 intermetallic phase. Details of heat treatments of steels are described in the text."
   },
   {
     "type": "text",
@@ -795,14 +946,24 @@
     "text": "It therefore appears that there are two scenarios for austenite based low density steels. For alloys containing less than $6 \\%$ Al, there is no $\\kappa ^ { \\prime }$ precipitation. The dislocation-based strain hardening, which is followed at higher loads by mechanical twinning, is the primary strain hardening mechanism. The lower work hardening rate in alloys containing less than $6 \\%$ Al is attributed to the suppression of the mechanical twinning. With a higher Al content $> 7 \\%$ , twinning is fully inhibited and lower strain hardening rates are essentially associated with dislocation planar gliding, which is affected by highly concentrated solid elements, SROs and $\\kappa ^ { \\prime }$ -carbides. Microband induced plasticity (MBIP) [73,74], dynamic slip band refinement (DSBR) [85] and shear band induced plasticity (SIP) [6], are the mechanisms, newly discovered, to describe the plastic deformation of Fe-Mn-Al-C austenitic steels with a high SFE. The variation of the true stress and strain hardening rate with the true strain of the alloys which were used for these mechanisms [6,74,85] is shown in Fig. 23, together with the data from a TWIP steel [83]. The steel compositions, process parameters and microstructures for these alloys are summarized in Table 4. Typically, structural metallic alloys reveal a monotonic decay of the strain hardening rate as a function of strain. The strain hardening of the TWIP steel (Fe-22Mn-0.6C [83]) exhibits the typical ‘hump’ associated to the strong microstructure refinement by deformation twinning. This is ascribed to the role of twin interfaces on plasticity and the activation of deformation twinning at low stress levels, close to the yield stress. The Fe-30Mn-2Al-1.2C steel with a low Al content shows a multi-stage strain hardening behaviour, which are linked to two different deformation mechanisms: dislocation substructure refinement at lower strains and deformation twinning microstructure refinement at higher strains [80]. As seen, the strain hardening rate of the three alloys used for MBIP (Fe-28Mn-10Al-1.0C), DSBR (Fe-30.4Mn-8Al-1.2C) and SIP (Fe-27Mn-12Al-0.9C) mechanisms show qualitatively the same strain dependence as observed in TWIP steels although microstructural mechanisms are different. No deformation mechanism changes are observed. The application of these mechanisms depends on the presence of SROs or $\\kappa ^ { \\prime } \\cdot$ -carbides. MBIP and DSBR were observed in the austenite, where SROs are present, while SIP was observed in the austenite where the $\\kappa ^ { \\prime }$ -carbides already exist. The ‘hump’ in the strain hardening rate vs. strain curves decreases and becomes flat as the aging time is increased. These mechanisms can explain the strain hardening behaviours in the solution treated and under aged states in the specific austenitic Fe-Mn-Al-C steels studied, but cannot be generalised. For example, the alloy Fe-15Mn-9Al-0.7C shows a different behaviour, a monotonic decay of strain hardening with increasing strain (black dashed curves [6] in Fig. 23). Above all, none of these mechanisms can completely explain the strain hardening behaviours in the highly alloyed steels or peak aged steels, where a negative strain hardening rate is observed. Further investigations are required to elucidate the dislocation–particle interactions, the role of $\\kappa ^ { \\prime } \\cdot$ -carbides in the formation of planar dislocation substructures and the contribution of these dislocation substructures to strain hardening."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/a6e90bf688ffe4b3d6a114ecd505e07e741cb7779c4905154ebdf90c90bad20f.jpg",
-    "caption": "Fig. 23. The true stress and strain hardening rate vs. true strain curves taken at room temperature of tensile tests for steels used for studying deformation mechanisms [6,74,80,83,85]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/a6e90bf688ffe4b3d6a114ecd505e07e741cb7779c4905154ebdf90c90bad20f.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/37ef4356507ba8bd37c3162b426057c08fb7fd17f5005eb374b43ca01bda0a65.jpg",
-    "table_caption": "Table 4 The comparison of the experimental conditions for three deformation mechanisms."
+    "type": "text",
+    "text": "[caption] Fig. 23. The true stress and strain hardening rate vs. true strain curves taken at room temperature of tensile tests for steels used for studying deformation mechanisms [6,74,80,83,85]."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/37ef4356507ba8bd37c3162b426057c08fb7fd17f5005eb374b43ca01bda0a65.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Table 4 The comparison of the experimental conditions for three deformation mechanisms."
   },
   {
     "type": "text",
@@ -833,9 +994,14 @@
     "text": "In general, for FCC materials, planar glide is expected to occur if they have a low SFE and so their extended partial dislocations are widely separated. If the SFE is high enough, cross-slip of the screw component of extended partials is easy to occur, tending to wavy slip forming a cell structure [145]. However, planar glide has often been observed in concentrated FCC solid-solution alloys with a high SFE [146]. Gerold and Karnthaler [146] explained planar glide at high SFE in the term ‘‘glide plane softening”, associated with the interaction between dislocations and short-range orders (or clustering). High concentrations of solute elements produce SROs after solution treatment. The initial dislocation that moves through the FCC lattice will destroy the SRO and as such, this dislocation will face a higher resistance to slip than dislocations that follow. Thus, plastic deformation of subsequent dislocations becomes localized into slip bands and this effect is called glide plane softening [146]. SRO in Fe-Mn-Al-C steels of high Al contents has been well reported in the solid solution state, manifested by the presence of weak superlattice reflections [72–76,82–85], which is similar to that of $\\kappa ^ { \\prime }$ -carbides. However, no other experimental proofs for SRO have been published so far. Medvedeva et al. [147] have studied the Mn, Al and C distribution and their effect on the SFE in austenite using ab initio simulation. They demonstrated that Al and C as well as Mn at concentrations higher than $1 5 \\mathrm { a t } . \\%$ increase the SFE, while the formation of Mn–C pairs and Al-ordering restrain the SFE growth. Short range Al-ordering strongly decreases the unstable stacking fault energy (USFE) making the formation of stacking faults much easier, but does not affect the SFE that can explain the observed planar glide deformation before the occurrence of mechanical twinning regardless of the SFE. Thus, addition of Al promotes SRO or $\\kappa ^ { \\prime } \\cdot$ -precipitation and a phenomenon of glide plane softening, which contribute to planar slip and increase the ductility but decrease the work hardening rate. Buckholz et al. [110] have demonstrated that SRO produces the glide plane softening responsible for increasing elongation where the TE increases but the work hardening rate decreases with the $\\mathsf { A l } / \\mathsf { C }$ ratio for solid solution Fe-30Mn-(3, 6, 9)Al-(0.8–1.6)C alloys. However, it seems that SROs or $\\kappa ^ { \\prime } \\cdot$ -carbides have different contributions to deformation as they lead to different deformation mechanisms (MBIP and DSBR vs SIP). Further studies on the nature of SRO and its effect on the deformation behaviour in Fe-Mn-Al-C steels are required."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/883ff4829a27e690d3a2e21b4ac38625fa4dbf52cd76a096888397ddce8e9e68.jpg",
-    "caption": "Fig. 24. Composition-dependent SFE map of Fe–Mn–Al–C steels at room temperature presented in 3D [142]. (a) SFE vs. C and Mn at different levels of Al, (b) SFE vs. Al and Mn at different levels of C, (c) SFE vs. deformation mechanisms."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/883ff4829a27e690d3a2e21b4ac38625fa4dbf52cd76a096888397ddce8e9e68.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 24. Composition-dependent SFE map of Fe–Mn–Al–C steels at room temperature presented in 3D [142]. (a) SFE vs. C and Mn at different levels of Al, (b) SFE vs. Al and Mn at different levels of C, (c) SFE vs. deformation mechanisms."
   },
   {
     "type": "text",
@@ -854,9 +1020,14 @@
     "text": "Depending on the alloy composition and the process route, Fe-Mn-Al-C steels provide a wide range of tensile properties. The tensile properties of Fe-Mn-Al-C alloys have been intensively reviewed by Howell et al. [1] and Kim et al. [2]. Plots of total elongation (TE) against ultimate tensile strength (UTS) have become a key tool in claiming success in alloy design and property differentiation. There is a large variation in the TE of Fe-Mn-Al-C steels reported in literature as tensile samples with various geometries were tested. The tensile strength and yield strength are reasonably independent of sample geometry, but the elongation, especially TE, is dependent on the gauge length and other geometrical parameters, such as the ratio of the gauge length to parallel length, and the width/thickness ratio. The tensile properties also depend on the surface condition of the specimens, especially for hot rolled strips. For a fair comparison, in this review, the total elongations tested with various specimen geometries in literature are converted to those for ASTM E-8 specimen geometry (gauge length $5 0 \\mathrm { m m }$ , width $1 2 . 5 \\mathrm { m m }$ , and thickness $1 \\mathrm { m m }$ ) using expression proposed by Oliver [148] with an Oliver factor $\\lambda = 1 . 1 4$ ."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/661e77f6bf3035273b2aa293ef0dcb7aa0d4a07ab6bce86ec785dbf17800afa1.jpg",
-    "caption": "Fig. 25. TE as a function of UTS in Fe-Mn-Al-C alloys for a uniform specimen geometry corresponding to ASTM E-8 standard $( 5 0 \\mathrm { m m } \\times 1 2 . 5 \\mathrm { m m } \\times 1 \\mathrm { m m } )$ ). The tensile data were taken from solution-treated and water-quenched strips [6–9,11,23,37,41,42,51,60–87,118,160]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/661e77f6bf3035273b2aa293ef0dcb7aa0d4a07ab6bce86ec785dbf17800afa1.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 25. TE as a function of UTS in Fe-Mn-Al-C alloys for a uniform specimen geometry corresponding to ASTM E-8 standard $( 5 0 \\mathrm { m m } \\times 1 2 . 5 \\mathrm { m m } \\times 1 \\mathrm { m m } )$ ). The tensile data were taken from solution-treated and water-quenched strips [6–9,11,23,37,41,42,51,60–87,118,160]."
   },
   {
     "type": "text",
@@ -871,9 +1042,14 @@
     "text": "Fe–Al alloys with an Al content up to $9 \\%$ and with additions of microalloying elements such as Ti, Nb and $V \\left( < 0 . 1 \\% \\right)$ exhibit an equivalent strength-elongation balance to the conventional bake hardenable (BH), low-alloyed C-Mn and HSLA steels at room temperature [24,37,41,42]. Typical engineering stress-strain curves of a Fe-6.8Al and a Fe-8.1Al steel [34] are shown in Fig. 26. These steels yield an UTS of $4 5 0 { - } 5 0 0 \\mathrm { M P a }$ and a TE of $1 5 \\mathrm { - } 3 0 \\%$ . The strain hardening exponent $( n )$ of BCC iron decreases slightly with the addition of Al. The $n$ -value has been reported to be in the range of 0.19–0.21 for Al in the range of $6 \\mathrm { - } 9 \\%$ [24,41]. The average Lankford parameter $( r _ { m } )$ decreases as Al is increased, from 1.4 for $1 . 3 5 \\%$ Al to 1.0 for $8 . 5 \\%$ Al [24,41,42]. The planar anisotropy $( \\Delta \\mathbf { r } )$ is about 0.03–0.77 for micro-alloyed Fe-6Al steels [42]. Note that some of the reported $\\Gamma _ { \\mathrm { m } }$ -values in literature were calculated from the measured texture [41] and are higher than those measured from tensile tests. The actual $r$ -value obtained from tensile tests for a Fe- $. 7 \\% 8 1$ steel might be equivalent to that of the dual phase steels, about 0.6–1.1. The inferior $r _ { m }$ -values of the Fe-Al alloys, with respect to BH steels, can be correlated with the much less intense and discontinuous $\\gamma \\cdot$ -fibre formation in the former. Optimal combinations of microalloying elements such as Ti, Nb V or B can cause a grain refinement (from ${ \\sim } 9 0$ to ${ \\sim } 4 0 \\mu \\mathrm { m } \\dot { }$ ) and provide about $3 0 \\mathrm { M P a }$ increase in the tensile strength and also suppress the formation of the $\\{ 0 0 1 \\} \\langle 1 1 0 \\rangle$ sheet texture, and therefore improves the deep drawing and stretch forming properties as well as the strength and ductility [42]. When Al is higher than $7 \\%$ , the formation of the short range ordering (K1 state) can cause brittle fracture in the sheet forming, and even during process step of cold rolling. To achieve good formability, the Al content should be limited to a maximum of $7 \\%$ . Ferritic low density steels have a potential to replace the conventional BH steels as the door outer panels. However, the weight saving potential might be compromised by the reduced Young’s modulus."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/22451858bf01ef5c40e1d963c9418f8b0fdfbe1eb2c6fb54b92152e0326d81a4.jpg",
-    "caption": "Fig. 26. Engineering stress–strain curves of two ferritic steels (Fe-6.8Al and Fe-8.1Al [41]) and two ferrite based duplex steels (Fe-3.3Mn-6.6Al-0.2C [44] and Fe-8.5Mn-5.6Al-0.3C [51]), after different heat treatments."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/22451858bf01ef5c40e1d963c9418f8b0fdfbe1eb2c6fb54b92152e0326d81a4.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 26. Engineering stress–strain curves of two ferritic steels (Fe-6.8Al and Fe-8.1Al [41]) and two ferrite based duplex steels (Fe-3.3Mn-6.6Al-0.2C [44] and Fe-8.5Mn-5.6Al-0.3C [51]), after different heat treatments."
   },
   {
     "type": "text",
@@ -900,14 +1076,24 @@
     "text": "The effect of C on the tensile properties of low density steels is shown in Fig. 28 for steels with two Mn levels [11,73,77,78]. With lower C levels, Fe-Mn-Al-C steels have duplex microstructures. As C is increased, the amount of the austenite increases and the steels will have a single phase austenite when C reaches a certain level $. \\sim 0 . 7 \\%$ for Fe-30Mn-9Al-$\\tt x C$ steels, $1 . 0 \\%$ for Fe-20Mn-10Al-xC steels). For duplex steels, the YS decreases slightly and UTS does not change significantly as the amount of austenite is increased with increasing the C content. This is due to the fact that the solution hardening of Al in the austenite is decreased. The Al content in austenite is reduced as a result of the elemental partitioning between two phases and it decreases as C is increased. On the other hand, the deformation capacity of the austenitic phase cannot fully unfold because of early failure from the $\\delta / \\gamma$ interfaces. The TE of duplex steels increases as the amount of austenite is increased and reaches a maximum value until the matrix becomes single-phase austenite. For single-phase austenitic steels, the strength increases but the elongation decreases with increasing C, which is related to the increased amount of $\\kappa \\cdot$ -carbide precipitation (or ordering) in the austenite upon cooling after solution treatment."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/a7f44fc31a598e9948385ee84d8d79ad974adc4b2e600943bca353f061f25c2a.jpg",
-    "caption": "Fig. 27. The tensile properties of two series of Fe-Mn-Al-C steels, showing the effect of Al on the microstructure and tensile properties. (a) Fe-30Mn-1.2CxAl, (b) Fe-30Mn-0.4C-xAl. The steels were solutionized at $1 1 0 0 ^ { \\circ } C$ for $^ { 2 \\mathrm { ~ h ~ } }$ . Solid curves are properties from the water quenched samples; dotted curves are properties from the water quenched and aged (at $5 5 0 ~ ^ { \\circ } \\mathrm { C }$ for $2 4 ~ \\mathrm { h }$ in air atmosphere) samples. Data are taken from Refs. [6,9,74,82,118]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/a7f44fc31a598e9948385ee84d8d79ad974adc4b2e600943bca353f061f25c2a.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/09791dd3a2ed765a46ec2108bc0e5c96794befb18274852e7ed3ed433c836ae8.jpg",
-    "caption": "Fig. 28. The tensile properties of two series of Fe-Mn-Al-C steels, showing the effect of C on the microstructure and tensile properties. (a) Fe-30Mn-9Al-xC, (b) Fe-20Mn-10Al-xC. Data are taken from Refs. [8,11,63,73,77,78,160]."
+    "type": "text",
+    "text": "[caption] Fig. 27. The tensile properties of two series of Fe-Mn-Al-C steels, showing the effect of Al on the microstructure and tensile properties. (a) Fe-30Mn-1.2CxAl, (b) Fe-30Mn-0.4C-xAl. The steels were solutionized at $1 1 0 0 ^ { \\circ } C$ for $^ { 2 \\mathrm { ~ h ~ } }$ . Solid curves are properties from the water quenched samples; dotted curves are properties from the water quenched and aged (at $5 5 0 ~ ^ { \\circ } \\mathrm { C }$ for $2 4 ~ \\mathrm { h }$ in air atmosphere) samples. Data are taken from Refs. [6,9,74,82,118]."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/09791dd3a2ed765a46ec2108bc0e5c96794befb18274852e7ed3ed433c836ae8.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 28. The tensile properties of two series of Fe-Mn-Al-C steels, showing the effect of C on the microstructure and tensile properties. (a) Fe-30Mn-9Al-xC, (b) Fe-20Mn-10Al-xC. Data are taken from Refs. [8,11,63,73,77,78,160]."
   },
   {
     "type": "text",
@@ -938,14 +1124,24 @@
     "text": "7.2.2.2. Aging kinetics. Age hardening is associated with homogenous precipitation of $\\kappa ^ { \\prime }$ -carbides within the austenite. A comparison of the strengthening effects of $\\kappa ^ { \\prime }$ -carbides in Fe-Mn-Al-C steels and of other carbides used in microalloyed steels is shown in Fig. 30 [140]. The strengthening potential of the $\\kappa \\ ' .$ -phase is between 100 and $3 5 0  { \\mathrm { M P a } }$ for a volume fraction of approximately 0.05–0.35."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/d165ecdbbde3a89363f0304d0e206354f4a96b4738262d1345fe3368a2c446fb.jpg",
-    "caption": "Fig. 29. (a) Effect of Al on mechanical properties of Fe-30 Mn-xAl-(0.85,0.95)C steels. The alloys were water quenched from $1 1 5 0 ^ { \\circ } C$ and aged at $5 5 0 ~ ^ { \\circ } C$ for $1 6 ~ \\mathrm { h }$ . $\\mathtt { E _ { C U N } }$ is the impact energy measured from U-notch Charpy specimens. (b) Effect of C on mechanical properties of Fe-30Mn-9Al- $\\mathbf { \\nabla \\cdot x C }$ steels. The alloys were water quenched from $1 0 5 0 ^ { \\circ } \\mathrm { C }$ (dashed curve) and aged at $5 5 0 ^ { \\circ } \\mathrm { C }$ for $1 6 \\mathrm { h }$ (solid curves). Data are taken from Ref. [7]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/d165ecdbbde3a89363f0304d0e206354f4a96b4738262d1345fe3368a2c446fb.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/ecb78f652089d1d38d67977d58be347afe62cf02889b6dfcd2473b4129495b16.jpg",
-    "caption": "Fig. 30. Comparison of strengthening by $\\kappa ^ { \\prime }$ -carbides in Fe-Mn-Al-C steels and other carbides used in microalloyed steels [140]."
+    "type": "text",
+    "text": "[caption] Fig. 29. (a) Effect of Al on mechanical properties of Fe-30 Mn-xAl-(0.85,0.95)C steels. The alloys were water quenched from $1 1 5 0 ^ { \\circ } C$ and aged at $5 5 0 ~ ^ { \\circ } C$ for $1 6 ~ \\mathrm { h }$ . $\\mathtt { E _ { C U N } }$ is the impact energy measured from U-notch Charpy specimens. (b) Effect of C on mechanical properties of Fe-30Mn-9Al- $\\mathbf { \\nabla \\cdot x C }$ steels. The alloys were water quenched from $1 0 5 0 ^ { \\circ } \\mathrm { C }$ (dashed curve) and aged at $5 5 0 ^ { \\circ } \\mathrm { C }$ for $1 6 \\mathrm { h }$ (solid curves). Data are taken from Ref. [7]."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/ecb78f652089d1d38d67977d58be347afe62cf02889b6dfcd2473b4129495b16.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 30. Comparison of strengthening by $\\kappa ^ { \\prime }$ -carbides in Fe-Mn-Al-C steels and other carbides used in microalloyed steels [140]."
   },
   {
     "type": "text",
@@ -960,14 +1156,24 @@
     "text": "The increase in the Al content from 7 to $1 1 \\%$ gives an increase in the age hardening effect, as can be seen in Figs. 27 and 29, but has less influence on the age hardening kinetics, as seen in Fig. 31b. The effect of Mn content in the range from 24 to $34 \\%$ on the age hardening behaviours was examined by Kalashinikov et al. [7] using fixed Al and C concentrations of $9 \\%$ and $0 . 9 \\%$ respectively. The YS and UTS reach a maxima at $2 6 \\%$ Mn, while ductility and impact toughness peak at $3 1 \\%$ Mn."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/66bd4f0b87e8eb2eef01d4ce0f80b0b932738c801078c7c9eedd39d9a1e3f700.jpg",
-    "caption": "Fig. 31. The aging curves of austenitic Fe-Mn-Al-C alloys established using hardness measurements or tensile tests: (a) the aging curves of a Fe-30Mn-8Al-1C-0.35Si steel [120] showing the temperature dependence of the aging kinetics; (b) the aging curves of several alloys aged at $5 5 0 ^ { \\circ } \\mathrm { C }$ , showing the effect of the Al and C contents. Data are extracted from Refs. [118,120] and converted to Brinell hardness for comparison; (c) the tensile properties of several alloys as a function of aging time, showing the effect of the C content and temperature. Data are taken from Refs. [77,78,118]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/66bd4f0b87e8eb2eef01d4ce0f80b0b932738c801078c7c9eedd39d9a1e3f700.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/903b436d618a64714d79ecbca79fb555458c831ca5e7b9d8911f81ece3405a81.jpg",
-    "caption": "Fig. 32. Engineering stress–strain curves of two Fe-Mn-Al-C steels in annealed condition: (a) a Fe–22.5Mn–1.2Al–0.3C steel with different cold rolling and annealing [152]; (b) a Fe-22Mn-(7–10)Al-(0.7–1.0)C steels with different recrystallization annealing parameters applied after a $5 0 \\%$ cold rolling reduction [5]."
+    "type": "text",
+    "text": "[caption] Fig. 31. The aging curves of austenitic Fe-Mn-Al-C alloys established using hardness measurements or tensile tests: (a) the aging curves of a Fe-30Mn-8Al-1C-0.35Si steel [120] showing the temperature dependence of the aging kinetics; (b) the aging curves of several alloys aged at $5 5 0 ^ { \\circ } \\mathrm { C }$ , showing the effect of the Al and C contents. Data are extracted from Refs. [118,120] and converted to Brinell hardness for comparison; (c) the tensile properties of several alloys as a function of aging time, showing the effect of the C content and temperature. Data are taken from Refs. [77,78,118]."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/903b436d618a64714d79ecbca79fb555458c831ca5e7b9d8911f81ece3405a81.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 32. Engineering stress–strain curves of two Fe-Mn-Al-C steels in annealed condition: (a) a Fe–22.5Mn–1.2Al–0.3C steel with different cold rolling and annealing [152]; (b) a Fe-22Mn-(7–10)Al-(0.7–1.0)C steels with different recrystallization annealing parameters applied after a $5 0 \\%$ cold rolling reduction [5]."
   },
   {
     "type": "text",
@@ -998,9 +1204,14 @@
     "text": "For structural purposes, a good combination of mechanical strength and fracture toughness is desirable. Gan et al. have studied the tensile properties and the impact toughness as a function of temperature in a Fe-30Mn-10Al-1C-1Si [153] and a"
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/c5734105cb102c22c0dbc050f6d94245ab1bca80df9f87e171f82339466ac1b3.jpg",
-    "caption": "Fig. 33. CVN impact energy as a function of test temperature for two austenitic steels [154,155]: curve 1, Fe-28Mn-5Al-1C solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for $7 5 ~ \\mathrm { { m i n } }$ (grain size $\\mathbf { d } = 4 1 \\mu \\mathrm { m } _ { \\cdot }$ ; curve 2, Fe-28Mn-5Al-1C solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for 8 h $( \\mathsf { d } = 1 3 5 \\mu \\mathrm { m } )$ ; curve 3, Fe-30Mn-10Al-1C-1Si solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for 1 h $\\mathbf { \\chi } ^ { \\prime } \\mathbf { d } = 1 2 0 \\mu \\mathrm { m } )$ ; curve 4, Fe-28Mn-5Al-1C solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for $^ { 8 \\mathrm { ~ h ~ } }$ and aged at $5 5 0 ~ ^ { \\circ } C$ for $1 6 \\mathrm { { h } }$ ; curve 5, Fe-30Mn-10Al-1C-1Si solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for $^ { 1 \\mathrm { ~ h ~ } }$ and aged at $5 5 0 ^ { \\circ } C$ for $1 6 \\mathrm { h }$ ."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/c5734105cb102c22c0dbc050f6d94245ab1bca80df9f87e171f82339466ac1b3.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 33. CVN impact energy as a function of test temperature for two austenitic steels [154,155]: curve 1, Fe-28Mn-5Al-1C solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for $7 5 ~ \\mathrm { { m i n } }$ (grain size $\\mathbf { d } = 4 1 \\mu \\mathrm { m } _ { \\cdot }$ ; curve 2, Fe-28Mn-5Al-1C solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for 8 h $( \\mathsf { d } = 1 3 5 \\mu \\mathrm { m } )$ ; curve 3, Fe-30Mn-10Al-1C-1Si solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for 1 h $\\mathbf { \\chi } ^ { \\prime } \\mathbf { d } = 1 2 0 \\mu \\mathrm { m } )$ ; curve 4, Fe-28Mn-5Al-1C solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for $^ { 8 \\mathrm { ~ h ~ } }$ and aged at $5 5 0 ~ ^ { \\circ } C$ for $1 6 \\mathrm { { h } }$ ; curve 5, Fe-30Mn-10Al-1C-1Si solutionized at $1 0 5 0 ^ { \\circ } \\mathrm { C }$ for $^ { 1 \\mathrm { ~ h ~ } }$ and aged at $5 5 0 ^ { \\circ } C$ for $1 6 \\mathrm { h }$ ."
   },
   {
     "type": "text",
@@ -1051,14 +1262,24 @@
     "text": "Fully austenitic Fe–22Mn–(0, 3, 6)Al–0.6C steels were dynamically compressed with nearly constant strain rate of ${ \\sim } 3 2 0 0 /$ s at room temperature [159]. The strain hardening rate of the Al-free steel was the highest and that of other two steels was nearly the same. This suggest that dynamic flow of the Al-free steel was associated with both TRIP and TWIP effects, and that of other two steels was dominated by dislocation gliding – mainly, planar glide for the 3 Al steel and the combination of both planar glide and wavy glide for the 6 Al steel."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/59c58b79fd3ba98b86e8a5ad7caf02a94ec05570c9ff97247860e2861a7405ba.jpg",
-    "caption": "Fig. 34. Specific energy absorption values of Fe-Mn-Al-C steels in comparison with different conventional deep-drawing steels at the crash relevant strain rate of $1 0 ^ { 3 } / s$ [6,9]."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/59c58b79fd3ba98b86e8a5ad7caf02a94ec05570c9ff97247860e2861a7405ba.jpg"
+    }
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/a874c6af4b2d7cc558bb31fbe119241e8ab8ba6ad22a4a513a27b6134bb5c08d.jpg",
-    "caption": "Fig. 35. The cyclic response of a Fe-30Mn-9Al-1C alloy after three aging treatments under a strain amplitude of $0 . 8 \\%$ (dotted curves) [161], and a Fe-30Mn-10Al-0.4C alloy under strain amplitudes ranging from $0 . 2 \\%$ to $2 . 0 \\%$ (solid curves) [162]."
+    "type": "text",
+    "text": "[caption] Fig. 34. Specific energy absorption values of Fe-Mn-Al-C steels in comparison with different conventional deep-drawing steels at the crash relevant strain rate of $1 0 ^ { 3 } / s$ [6,9]."
+  },
+  {
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/a874c6af4b2d7cc558bb31fbe119241e8ab8ba6ad22a4a513a27b6134bb5c08d.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Fig. 35. The cyclic response of a Fe-30Mn-9Al-1C alloy after three aging treatments under a strain amplitude of $0 . 8 \\%$ (dotted curves) [161], and a Fe-30Mn-10Al-0.4C alloy under strain amplitudes ranging from $0 . 2 \\%$ to $2 . 0 \\%$ (solid curves) [162]."
   },
   {
     "type": "text",
@@ -1089,10 +1310,18 @@
     "text": "Formability, which is important for automotive applications, is the ability of a material to undergo the desired shape changes without necking failures. The normal anisotropy factor and the strain hardening exponent are usually considered the most important factors for sheet forming properties. In general, the full austenitic Fe-Mn-Al-C steels displays a lower work-hardening rate compared with high Mn steels, although there is no report about the anisotropy value. A strain hardening exponent of $\\mathrm { n } = 0 . 5 8$ was measured for a Fe-28Mn-12Al-1C steel [6]. This value is higher than the reported strain hardening exponents of $\\mathrm { n } = 0 . 3 3 \\substack { - 0 . 4 5 }$ for the austenitic 304 stainless steel. Other tests such as bending and hole expansion are used to characterize the stretch forming and deep drawing ability. Limited reports about the bendability and hole expansion capacity of Fe-Mn-Al-C steels [5,69] are found for a few duplex steels in literature and these results are given in Table 5. The hole expansion ratio of Fe-Mn-Al-C steels is comparable with that of a DP600 steel. The bending angle and the dome expansion height of Fe-Mn-Al-C steels are lower compared with conventional AHSS of similar strength levels. The low bending angle in duplex steels might be related to the formation and the presence of d-ferrite stringers within the $\\gamma \\cdot$ -austenitic matrix. It is known that ordered ferrite possesses a brittle behaviour [89]. In view of the limited amount of experimental data, these conclusions cannot be generalised with confidence."
   },
   {
-    "type": "image",
-    "img_path_resolved": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/1972eb6d79e73177777283174de3bbdb1c1fda6d7bda163bfa15ab8108353fcd.jpg",
-    "table_caption": "Table 5 Formability of duplex Fe-Mn-Al-C steels in comparison with DP steels.",
-    "table_footnote": "a HEC: Hole expansion capacity; BA: Bending angle; DEH: Dome expansion height; ST: Strip thickness."
+    "type": "image_url",
+    "image_url": {
+      "url": "/Users/mac/Desktop/paper_extractor/SteelDig/datasets/paper_parsered/1-s2.0-S007964251730066X-main/1-s2.0-S007964251730066X-main/auto/images/1972eb6d79e73177777283174de3bbdb1c1fda6d7bda163bfa15ab8108353fcd.jpg"
+    }
+  },
+  {
+    "type": "text",
+    "text": "[caption] Table 5 Formability of duplex Fe-Mn-Al-C steels in comparison with DP steels."
+  },
+  {
+    "type": "text",
+    "text": "[footnote] a HEC: Hole expansion capacity; BA: Bending angle; DEH: Dome expansion height; ST: Strip thickness."
   },
   {
     "type": "text",
