@@ -39,8 +39,17 @@
       "processes_notes": null
     }
   ],
+  "samples": [
+    {
+      "sample_id": null,
+      "paper_id": null,
+      "alloy_id": null,
+      "process_id": null
+    }
+  ],
   "processing_steps": [
     {
+      "sample_id": null,
       "paper_id": null,
       "sequence": null,
       "type": null,
@@ -51,14 +60,6 @@
       "cooling_medium": null,
       "reduction_ratio": null,
       "processing_steps_notes": null
-    }
-  ],
-  "samples": [
-    {
-      "sample_id": null,
-      "paper_id": null,
-      "alloy_id": null,
-      "process_id": null
     }
   ],
   "structures": [

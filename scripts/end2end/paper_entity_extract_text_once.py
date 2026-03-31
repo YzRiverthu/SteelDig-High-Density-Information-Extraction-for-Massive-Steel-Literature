@@ -463,7 +463,7 @@ def main() -> None:
     parser.add_argument(
         "--temperature",
         type=float,
-        default=0.7,
+        default=0.3,
         help="采样温度（结构化抽取建议偏低）",
     )
     parser.add_argument(

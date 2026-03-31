@@ -66,9 +66,20 @@
     }
   ],
 
+  // ========== 样品对象：唯一桥接层 ==========
+  "samples": [
+    {
+      "sample_id": null, // 样品唯一标识；主桥接键
+      "paper_id": null, // 指向 papers[].paper_id
+      "alloy_id": null, // 指向 alloys[].alloy_id
+      "process_id": null // 指向 processes[].process_id
+    }
+  ],
+  
   // ========== 工艺步骤对象 ==========
   "processing_steps": [
     {
+      "sample_id": null, // 主绑定键；优先用 sample_id 联结
       "paper_id": null, // 指向 papers[].paper_id
       "sequence": null, // 步骤顺序；可为 "0"、"1" 或分支形式如 "5-H90"
       "type": null, // 步骤大类：heat_treatment / thermomechanical_processing / mechanical_processing 等
@@ -79,16 +90,6 @@
       "cooling_medium": null, // 冷却方式，如 water quenching / air cooling
       "reduction_ratio": null, // 压下量、变形量等
       "processing_steps_notes": null // 厚度、道次、设备、初始应变率等其余参数和注释说明
-    }
-  ],
-
-  // ========== 样品对象：唯一桥接层 ==========
-  "samples": [
-    {
-      "sample_id": null, // 样品唯一标识；主桥接键
-      "paper_id": null, // 指向 papers[].paper_id
-      "alloy_id": null, // 指向 alloys[].alloy_id
-      "process_id": null // 指向 processes[].process_id
     }
   ],
 

@@ -2,7 +2,11 @@
 """
 一次性多模态文献实体抽取：读取 **build_multimodal_content** 已生成的
 `*_multimodal_content.json`（OpenAI 兼容的 text + image_url 列表），
-将其中本地文件路径在调用前转为 base64，再请求 Kimi，按 paper_entity_schema.jsonc 输出 JSON。
+将其中本地文件路径在调用前转为 base64，再请求本地 vLLM（OpenAI 兼容 /v1），
+按 paper_entity_schema.jsonc 输出 JSON。
+
+多模态需 vLLM 侧部署**视觉语言模型**；若仅文本模型（如 Qwen3.5-9B 纯文本）
+请改用 paper_entity_extract_text_once.py。
 
 请先运行：
 python scripts/clean_content_list.py
@@ -11,15 +15,18 @@ python scripts/build_multimodal_content.py
 依赖：openai、json5、python-dotenv（可选，用于 .env）
 
 用法（在项目根目录）：
-  export MOONSHOT_API_KEY=...   # 或 KIMI_API_KEY
+  # 先启动支持多模态的 vLLM；端口与 OPENAI_BASE_URL 一致（参见 digmodel/basemodel/start_vllm.sh）
+  export OPENAI_BASE_URL=http://127.0.0.1:8001/v1
+  export OPENAI_API_KEY=EMPTY
+  export OPENAI_MODEL=<你的视觉模型 served-model-name>
 
   # 批量：扫描 multimodal_content 下所有 *_multimodal_content.json
-  python scripts/paper_entity_extract_once.py \\
+  python scripts/paper_entity_extract_multi_once.py \\
     --input datasets/multimodal_content \\
     --output-dir datasets/output_multi
 
   # 单文件
-  python scripts/paper_entity_extract_once.py -i datasets/multimodal_content/0321_noted_multimodal_content.json
+  python scripts/paper_entity_extract_multi_once.py -i datasets/multimodal_content/0321_noted_multimodal_content.json
 """
 
 from __future__ import annotations
@@ -60,6 +67,40 @@ except ImportError as e:
 from openai import OpenAI  # noqa: E402
 
 
+def _effective_openai_base_url() -> str:
+    return os.environ.get(
+        "OPENAI_BASE_URL", "http://127.0.0.1:8001/v1"
+    ).rstrip("/")
+
+
+def _openai_client() -> OpenAI:
+    """与 digmodel/basemodel/start_vllm.sh、test_vllm.py 一致：本地 OpenAI 兼容端点。"""
+    key = os.environ.get("OPENAI_API_KEY", "EMPTY")
+    return OpenAI(api_key=key, base_url=_effective_openai_base_url())
+
+
+def _resolve_chat_model_id(client: OpenAI, cli_model: Optional[str]) -> str:
+    """与 vLLM 返回的 model id 必须一致；未指定时取 /v1/models 第一个 id。"""
+    for candidate in ((cli_model or "").strip(), (os.environ.get("OPENAI_MODEL") or "").strip()):
+        if candidate:
+            return candidate
+    try:
+        listed = client.models.list()
+    except Exception as e:
+        raise SystemExit(
+            "无法访问 vLLM 的 /v1/models（请检查 OPENAI_BASE_URL、服务是否已启动、"
+            "OPENAI_API_KEY 是否与 --api-key 一致）。\n"
+            f"详情: {e}"
+        ) from e
+    data = getattr(listed, "data", None) or []
+    if not data:
+        raise SystemExit(
+            "/v1/models 未返回任何模型。请设置环境变量 OPENAI_MODEL 或使用 --model，"
+            "名称须与 vLLM 注册的 id 完全一致（可对照启动日志或 curl /v1/models）。"
+        )
+    return str(data[0].id)
+
+
 def _guess_image_mime(image_path: Path) -> str:
     ext = image_path.suffix.lower()
     return {
@@ -97,7 +138,7 @@ def ensure_multimodal_payload_for_api(
 
     - text：原样保留
     - image_url.url 已为 data:...;base64,... 的，原样保留
-    - image_url.url 为本地文件路径的，读入并转为 data URL（Kimi 需要 base64）
+    - image_url.url 为本地文件路径的，读入并转为 data URL（OpenAI 兼容多模态常用 base64）
     """
     out: List[Dict[str, Any]] = []
     for p in parts:
@@ -133,24 +174,39 @@ def load_schema_object(schema_path: Path) -> Dict[str, Any]:
         return json5.load(f)
 
 
-def load_system_prompt_from_markdown(md_path: Path) -> str:
-    """从 paper_entity_extraction_prompt.md 中提取「系统提示词」代码块正文。"""
+def load_system_prompt_from_markdown(md_path: Path, *, variant: str) -> str:
+    """从 paper_entity_extraction_prompt.md 中提取对应模式的「系统提示词」代码块正文。
+
+    variant: \"text\" -> ## 系统提示词（纯文本）；\"multi\" -> ## 系统提示词（多模态）
+    """
+    if variant == "text":
+        header = "## 系统提示词（纯文本）"
+    elif variant == "multi":
+        header = "## 系统提示词（多模态）"
+    else:
+        raise ValueError(f"未知 prompt variant: {variant!r}，应为 \"text\" 或 \"multi\"")
     raw = md_path.read_text(encoding="utf-8")
     m = re.search(
-        r"## 系统提示词.*?\n```(?:text)?\s*\n(.*?)```",
+        re.escape(header) + r"\s*\n```(?:text)?\s*\n(.*?)```",
         raw,
         flags=re.DOTALL,
     )
     if not m:
-        raise ValueError(f"无法在 {md_path} 中解析系统提示词代码块")
+        raise ValueError(
+            f"无法在 {md_path} 中解析 {header} 下方的 ``` 系统提示词代码块"
+        )
     return m.group(1).strip()
 
 
-def build_system_content(schema_path: Path, prompt_md_path: Path) -> str:
+def build_system_content(
+    schema_path: Path, prompt_md_path: Path, *, prompt_variant: str
+) -> str:
     """组装完整 system 消息（规则 + Schema JSON）。"""
     schema_obj = load_schema_object(schema_path)
     schema_compact = json.dumps(schema_obj, ensure_ascii=False)
-    system_rules = load_system_prompt_from_markdown(prompt_md_path)
+    system_rules = load_system_prompt_from_markdown(
+        prompt_md_path, variant=prompt_variant
+    )
     return (
         system_rules
         + "\n\n【JSON Schema（已由程序去除注释，键与嵌套结构必须与输出一致；"
@@ -199,7 +255,8 @@ def run_extraction(
     model: str,
     output_path: Optional[Path],
     dry_run: bool,
-    temperature: float = 1.0,
+    temperature: float = 0.3,
+    max_tokens: int = 8192,
 ) -> Dict[str, Any]:
     with open(multimodal_json_path, "r", encoding="utf-8") as f:
         raw_parts: List[Dict[str, Any]] = json.load(f)
@@ -229,13 +286,6 @@ def run_extraction(
         {"type": "text", "text": user_tail},
     ]
 
-    raw_key = os.environ.get("MOONSHOT_API_KEY") or os.environ.get("KIMI_API_KEY")
-    api_key = (raw_key or "").strip()
-    if not api_key:
-        raise SystemExit(
-            "请设置环境变量 MOONSHOT_API_KEY 或 KIMI_API_KEY（Moonshot / Kimi OpenAPI 密钥）。"
-        )
-
     if dry_run:
         print(
             json.dumps(
@@ -243,8 +293,10 @@ def run_extraction(
                     "multimodal_file": str(multimodal_json_path),
                     "system_len": len(system_content),
                     "user_parts": len(user_content),
+                    "openai_base_url": _effective_openai_base_url(),
                     "model": model,
                     "temperature": temperature,
+                    "max_tokens": max_tokens,
                     "output": str(output_path) if output_path else None,
                 },
                 ensure_ascii=False,
@@ -253,7 +305,7 @@ def run_extraction(
         )
         return {}
 
-    client = OpenAI(api_key=api_key, base_url="https://api.moonshot.cn/v1")
+    client = _openai_client()
     completion = client.chat.completions.create(
         model=model,
         messages=[
@@ -261,12 +313,24 @@ def run_extraction(
             {"role": "user", "content": user_content},
         ],
         temperature=temperature,
+        max_tokens=max_tokens,
     )
     raw_reply = completion.choices[0].message.content
     if not raw_reply:
         raise RuntimeError("模型返回空内容")
+    if not isinstance(raw_reply, str):
+        raw_reply = str(raw_reply)
 
-    result = parse_model_json(raw_reply)
+    try:
+        result = parse_model_json(raw_reply)
+    except ValueError as e:
+        if output_path:
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            raw_path = output_path.with_suffix(".raw.txt")
+            raw_path.write_text(raw_reply, encoding="utf-8")
+            print(f"JSON 解析失败，已保存原始回复: {raw_path}", file=sys.stderr)
+            raise ValueError(f"{e}\n原始模型输出已写入: {raw_path}") from e
+        raise
 
     if output_path:
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -280,7 +344,7 @@ def run_extraction(
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "多模态文献实体抽取（Kimi）：输入为 build_multimodal_content 生成的 "
+            "多模态文献实体抽取（本地 vLLM OpenAI 兼容）：输入为 build_multimodal_content 生成的 "
             "*_multimodal_content.json，支持目录批量与跳过已抽取"
         )
     )
@@ -312,13 +376,24 @@ def main() -> None:
         "--prompt",
         type=Path,
         default=PROJECT_ROOT / "prompts/paper_entity_extraction_prompt.md",
+        help="含「系统提示词（多模态）」代码块的 Markdown（默认本仓库 prompts 文件）",
     )
-    parser.add_argument("--model", default="kimi-k2.5", help="多模态模型名")
+    parser.add_argument(
+        "--model",
+        default=None,
+        help="vLLM 模型 id（须与 GET /v1/models 一致）；不设则用 OPENAI_MODEL；仍为空则自动取列表第一个",
+    )
     parser.add_argument(
         "--temperature",
         type=float,
-        default=1.0,
-        help="采样温度；kimi-k2.5 多模态目前仅允许 1.0（传其它值会 400）",
+        default=0.3,
+        help="采样温度",
+    )
+    parser.add_argument(
+        "--max-tokens",
+        type=int,
+        default=int(os.environ.get("OPENAI_MAX_TOKENS", "8192")),
+        help="completion 最大生成 token（也可设 OPENAI_MAX_TOKENS）",
     )
     parser.add_argument(
         "--dry-run",
@@ -343,7 +418,13 @@ def main() -> None:
     prompt_path = args.prompt.resolve()
 
     files = collect_multimodal_files(multimodal_arg)
-    system_content = build_system_content(schema_path, prompt_path)
+    system_content = build_system_content(
+        schema_path, prompt_path, prompt_variant="multi"
+    )
+
+    client = _openai_client()
+    model_id = _resolve_chat_model_id(client, args.model)
+    print(f"使用模型: {model_id}", file=sys.stderr)
 
     single_explicit_output: Optional[Path] = None
     if len(files) == 1 and args.output is not None:
@@ -366,10 +447,11 @@ def main() -> None:
             run_extraction(
                 multimodal_json_path=content_path,
                 system_content=system_content,
-                model=args.model,
+                model=model_id,
                 output_path=out_path,
                 dry_run=args.dry_run,
                 temperature=args.temperature,
+                max_tokens=args.max_tokens,
             )
         except Exception as e:
             failed.append(f"{content_path}: {e}")

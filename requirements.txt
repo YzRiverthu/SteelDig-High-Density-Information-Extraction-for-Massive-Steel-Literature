@@ -2,5 +2,6 @@
 openai>=1.0.0
 json5>=0.9.0
 python-dotenv>=1.0.0
+tqdm>=4.66.0
 # Neo4j 知识图谱导入（scripts/json_entities_to_neo4j.py）
 neo4j>=5.0.0
