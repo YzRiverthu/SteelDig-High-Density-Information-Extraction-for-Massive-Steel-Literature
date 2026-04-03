@@ -56,8 +56,19 @@ _SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
-MULTIMODAL_INPUT_DIR = PROJECT_ROOT / "datasets" / "multimodal_content"
-OUTPUT_MULTI_DIR = PROJECT_ROOT / "datasets" / "output_multi"
+# -----------------------------------------------------------------------------
+# 用户配置区（直接改这里）
+# -----------------------------------------------------------------------------
+# 输入目录：这里应放 *_multimodal_content.json 文件
+USER_CONFIG_MULTIMODAL_INPUT: Path = Path(
+    "/home/caep-xuben/chenchengbing/yzj/datasets/llm_baseline_366/output_hybrid_auto_multimodal_input"
+)
+#
+# 输出目录：实体抽取 JSON 写到这里
+USER_CONFIG_MULTI_OUTPUT_DIR: Path = Path(
+    "/home/caep-xuben/chenchengbing/yzj/datasets/llm_baseline_366/output_multi"
+)
+# -----------------------------------------------------------------------------
 
 try:
     import json5  # noqa: F401
@@ -329,13 +340,13 @@ def main() -> None:
         "--input",
         "-i",
         type=Path,
-        default=MULTIMODAL_INPUT_DIR,
+        default=USER_CONFIG_MULTIMODAL_INPUT,
         help="multimodal_content 目录或单个 *_multimodal_content.json",
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=OUTPUT_MULTI_DIR,
+        default=USER_CONFIG_MULTI_OUTPUT_DIR,
         help="结果 JSON 目录；每个 foo_multimodal_content.json 对应 foo_entities.json",
     )
     parser.add_argument(

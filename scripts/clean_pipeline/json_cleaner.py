@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 # 路径与常量
 # -----------------------------------------------------------------------------
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 PAPER_PARSERED_DIR = PROJECT_ROOT / "datasets" / "paper_parsered"
 INPUT_CLEANED_DIR = PROJECT_ROOT / "datasets" / "input_cleaned"
 
@@ -38,11 +38,6 @@ REFERENCES_TITLE_LEVEL = 1
 
 # 带路径的块类型（用于过滤、合并逻辑）
 BLOCK_TYPES_WITH_PATH = (TYPE_IMAGE, TYPE_EQUATION, TYPE_TABLE)
-
-
-# -----------------------------------------------------------------------------
-# 块级清洗（内部辅助）
-# -----------------------------------------------------------------------------
 
 
 def _get_str(value: Any, default: str = "") -> str:
@@ -67,14 +62,10 @@ def _is_references_heading(block: Dict[str, Any]) -> bool:
 
 
 def _clean_text_block(block: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-    """
-    清洗文本块：仅保留 type / text。
-    空文本返回 None（References 标题由上层在循环中截断）。
-    """
+    """清洗文本块：仅保留 type / text。"""
     text = _get_str(block.get("text"))
     if not text:
         return None
-
     return {"type": TYPE_TEXT, "text": text}
 
 
@@ -118,25 +109,11 @@ def _clean_table_block(block: Dict[str, Any]) -> Dict[str, Any]:
     return out
 
 
-# -----------------------------------------------------------------------------
-# 主清洗流程
-# -----------------------------------------------------------------------------
-
-
 def clean_paper_json(
     paper_data: List[Dict[str, Any]],
     fields_to_remove: Optional[List[str]] = None,
 ) -> List[Dict[str, Any]]:
-    """
-    清理论文 content_list：去字段、去 discarded、截断参考文献段。
-
-    Args:
-        paper_data: MinerU 解析的 content_list（列表，每项为块字典）
-        fields_to_remove: 要从每个块中删除的字段，默认 bbox、page_idx
-
-    Returns:
-        清理后的块列表（不含 discarded，References 标题及其后内容被丢弃）
-    """
+    """清理论文 content_list：去字段、去 discarded、截断参考文献段。"""
     to_remove = fields_to_remove if fields_to_remove is not None else DEFAULT_FIELDS_TO_REMOVE
     cleaned: List[Dict[str, Any]] = []
     skip_rest = False
@@ -149,7 +126,6 @@ def clean_paper_json(
         if block_type == TYPE_DISCARDED:
             continue
 
-        # 遇到 References 一级标题：丢弃本块并截断后续
         if _is_references_heading(block):
             skip_rest = True
             continue
@@ -174,9 +150,8 @@ def clean_paper_json(
 
 
 def filter_empty_blocks(paper_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """
-    过滤空块：无路径的 image/equation/table、空文本的 text 均丢弃。
-    """
+    """过滤空块：无路径的 image/equation/table、空文本的 text 均丢弃。"""
+
     def _keep(block: Dict[str, Any]) -> bool:
         t = block.get("type")
         if t in BLOCK_TYPES_WITH_PATH:
@@ -190,19 +165,8 @@ def filter_empty_blocks(paper_data: List[Dict[str, Any]]) -> List[Dict[str, Any]
     return filtered
 
 
-
-
-
-# -----------------------------------------------------------------------------
-# 文件与批量入口
-# -----------------------------------------------------------------------------
-
-
 def find_content_list_files(root_dir: Optional[Path] = None) -> List[Path]:
-    """
-    在指定目录下递归查找所有 *_content_list.json。
-    默认使用 datasets/paper_parsered。
-    """
+    """在指定目录下递归查找所有 *_content_list.json。"""
     root = root_dir or PAPER_PARSERED_DIR
     if not root.exists():
         logger.warning("目录不存在: %s", root)
@@ -214,16 +178,7 @@ def clean_one_file(
     input_path: Path,
     output_dir: Path = INPUT_CLEANED_DIR,
 ) -> Optional[Path]:
-    """
-    清洗单个 *_content_list.json，输出到 output_dir，文件名不变。
-
-    Args:
-        input_path: 源 JSON 路径
-        output_dir: 输出目录
-
-    Returns:
-        输出文件路径；若输入不是列表格式则返回 None
-    """
+    """清洗单个 *_content_list.json，输出到 output_dir，文件名不变。"""
     try:
         with open(input_path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -251,16 +206,7 @@ def clean_all_papers(
     input_dir: Optional[Path] = None,
     output_dir: Optional[Path] = None,
 ) -> List[Path]:
-    """
-    批量清洗：遍历 input_dir 下所有 *_content_list.json，写入 output_dir。
-
-    Args:
-        input_dir: 论文解析结果根目录，默认 datasets/paper_parsered
-        output_dir: 清洗结果目录，默认 datasets/input_cleaned
-
-    Returns:
-        成功写入的输出文件路径列表
-    """
+    """批量清洗：遍历 input_dir 下所有 *_content_list.json，写入 output_dir。"""
     input_dir = input_dir or PAPER_PARSERED_DIR
     output_dir = output_dir or INPUT_CLEANED_DIR
 
@@ -285,3 +231,4 @@ def clean_all_papers(
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     clean_all_papers()
+

@@ -60,8 +60,25 @@ _SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(_SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_DIR))
 
-TEXT_LLM_INPUT_DIR = PROJECT_ROOT / "datasets" / "text_llm_input"
-TEXT_RAW_OUTPUT_DIR = PROJECT_ROOT / "datasets" / "output_text"
+# -----------------------------------------------------------------------------
+# 用户配置区（直接改这里）
+# -----------------------------------------------------------------------------
+# 输入路径：支持以下两类
+# 1) *_text_llm_input.json（需包含 "text" 字段）
+# 2) *.md（论文 markdown）
+#
+# 示例：
+#   Path("/home/caep-xuben/chenchengbing/yzj/datasets/llm_baseline_366/output_hybrid_auto_text_llm_input")
+#   Path("/home/caep-xuben/chenchengbing/yzj/datasets/llm_baseline_366/xmls_to_markdown")
+USER_CONFIG_TEXT_INPUT: Path = Path(
+    "/home/caep-xuben/chenchengbing/yzj/datasets/llm_baseline_366/output_hybrid_auto_text_llm_input"
+)
+#
+# 输出目录：原始模型输出 *.raw.txt 写到这里
+USER_CONFIG_TEXT_OUTPUT_DIR: Path = Path(
+    "/home/caep-xuben/chenchengbing/yzj/datasets/llm_baseline_366/output_text"
+)
+# -----------------------------------------------------------------------------
 
 try:
     import json5  # noqa: F401 — 与 lib 共用依赖，此处先失败并给出中文提示
@@ -115,43 +132,55 @@ def load_paper_text_from_text_llm_input(path: Path) -> str:
     return text
 
 
-def collect_text_llm_input_files(path: Path) -> List[Path]:
+def load_paper_text(path: Path) -> str:
+    """兼容 JSON/Markdown 两类输入。"""
+    suffix = path.suffix.lower()
+    if suffix == ".json":
+        return load_paper_text_from_text_llm_input(path)
+    if suffix == ".md":
+        return path.read_text(encoding="utf-8")
+    raise ValueError(f"不支持的输入类型（仅支持 .json/.md）: {path}")
+
+
+def collect_text_input_files(path: Path) -> List[Path]:
     """
-    path 为文件：须为 *_text_llm_input.json。
-    path 为目录：其下所有 *_text_llm_input.json（仅一层，按名排序）。
+    path 为文件：支持 *.json 或 *.md。
+    path 为目录：其下所有 *.json/*.md（仅一层，按名排序）。
     """
     path = path.resolve()
     if path.is_file():
-        if not path.name.endswith("_text_llm_input.json"):
-            raise SystemExit(
-                f"单文件须为 *_text_llm_input.json，当前: {path.name}"
-            )
+        if path.suffix.lower() not in {".json", ".md"}:
+            raise SystemExit(f"单文件仅支持 .json/.md，当前: {path.name}")
         return [path]
     if path.is_dir():
-        files = sorted(path.glob("*_text_llm_input.json"))
+        files = sorted(
+            p
+            for p in path.iterdir()
+            if p.is_file() and p.suffix.lower() in {".json", ".md"}
+        )
         if not files:
             raise SystemExit(
-                f"目录中未找到 *_text_llm_input.json: {path}\n"
-                "请先运行: python scripts/build_multimodal_content.py"
+                f"目录中未找到 .json/.md 输入文件: {path}\n"
+                "示例：*_text_llm_input.json 或 *.md"
             )
         return list(files)
     raise SystemExit(f"路径不存在: {path}")
 
 
-def derive_raw_output_path(text_llm_input_path: Path, output_dir: Path) -> Path:
+def derive_raw_output_path(text_input_path: Path, output_dir: Path) -> Path:
     """foo_text_llm_input.json -> output_dir/foo_entities_text_only.raw.txt"""
-    name = text_llm_input_path.name
+    name = text_input_path.name
     if name.endswith("_text_llm_input.json"):
         stem = name[: -len("_text_llm_input.json")]
         out_name = f"{stem}_entities_text_only.raw.txt"
     else:
-        out_name = f"{text_llm_input_path.stem}_entities_text_only.raw.txt"
-    return output_dir.resolve() / out_name # 构建原始输出路径，“/”表示路径分隔符
+        out_name = f"{text_input_path.stem}_entities_text_only.raw.txt"
+    return output_dir.resolve() / out_name
 
 
 def run_extraction(
     *,
-    text_llm_input_path: Path,
+    text_input_path: Path,
     system_content: str,
     model: str,
     raw_output_path: Optional[Path],
@@ -164,7 +193,7 @@ def run_extraction(
 
     dry_run 时第二项为 None。quiet 为 True 时不打印「已写入…」。
     """
-    paper_text = load_paper_text_from_text_llm_input(text_llm_input_path)
+    paper_text = load_paper_text(text_input_path)
 
     user_tail = (
         "【任务】上文按阅读顺序给出了论文全文（未提供插图）。"
@@ -186,7 +215,7 @@ def run_extraction(
         print(
             json.dumps(
                 {
-                    "text_llm_input_file": str(text_llm_input_path),
+                    "text_input_file": str(text_input_path),
                     "system_len": len(system_content),
                     "user_chars": len(user_message),
                     "openai_base_url": effective_openai_base_url(),
@@ -239,7 +268,7 @@ def run_extraction(
 
 def _task_record(
     *,
-    text_llm_input_path: Path,
+    text_input_path: Path,
     raw_output_path: Path,
     status: str,
     processing_seconds: Optional[float],
@@ -252,7 +281,7 @@ def _task_record(
     else:
         ps = round(float(processing_seconds), 4)
     rec: Dict[str, Any] = {
-        "text_llm_input": str(text_llm_input_path),
+        "text_input": str(text_input_path),
         "raw_output": str(raw_output_path),
         "status": status,
         "processing_seconds": ps,
@@ -268,7 +297,7 @@ def _task_record(
 
 def _run_one_extraction_job(
     *,
-    text_llm_input_path: Path,
+    text_input_path: Path,
     raw_output_path: Path,
     system_content: str,
     model_id: str,
@@ -280,7 +309,7 @@ def _run_one_extraction_job(
     t0 = time.perf_counter()
     try:
         _raw, usage_meta = run_extraction(
-            text_llm_input_path=text_llm_input_path,
+            text_input_path=text_input_path,
             system_content=system_content,
             model=model_id,
             raw_output_path=raw_output_path,
@@ -291,7 +320,7 @@ def _run_one_extraction_job(
         )
         elapsed = time.perf_counter() - t0
         return _task_record(
-            text_llm_input_path=text_llm_input_path,
+            text_input_path=text_input_path,
             raw_output_path=raw_output_path,
             status="ok",
             processing_seconds=elapsed,
@@ -301,10 +330,10 @@ def _run_one_extraction_job(
     except Exception as e:
         elapsed = time.perf_counter() - t0
         with stderr_exc_lock:
-            print(f"失败: {text_llm_input_path}", file=sys.stderr)
+            print(f"失败: {text_input_path}", file=sys.stderr)
             traceback.print_exc()
         return _task_record(
-            text_llm_input_path=text_llm_input_path,
+            text_input_path=text_input_path,
             raw_output_path=raw_output_path,
             status="failed",
             processing_seconds=elapsed,
@@ -323,13 +352,13 @@ def main() -> None:
         "--input",
         "-i",
         type=Path,
-        default=TEXT_LLM_INPUT_DIR,
-        help="text_llm_input 目录或单个 *_text_llm_input.json",
+        default=USER_CONFIG_TEXT_INPUT,
+        help="输入目录或单文件；支持 *_text_llm_input.json 和 *.md",
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=TEXT_RAW_OUTPUT_DIR,
+        default=USER_CONFIG_TEXT_OUTPUT_DIR,
         help="原始模型输出目录（默认 datasets/output_text，写入 *_entities_text_only.raw.txt）",
     )
     parser.add_argument(
@@ -415,7 +444,7 @@ def main() -> None:
     schema_path = args.schema.resolve()
     prompt_path = args.prompt.resolve()
 
-    files = collect_text_llm_input_files(input_arg)
+    files = collect_text_input_files(input_arg)
     system_content = build_system_content(
         schema_path,
         prompt_path,
@@ -482,7 +511,7 @@ def main() -> None:
             print(f"跳过（已存在非空原始输出）: {raw_path}")
             log_items.append(
                 _task_record(
-                    text_llm_input_path=text_input_path,
+                    text_input_path=text_input_path,
                     raw_output_path=raw_path,
                     status="skipped",
                     processing_seconds=None,
@@ -501,7 +530,7 @@ def main() -> None:
                     dry_run=args.dry_run,
                     temperature=args.temperature,
                     max_tokens=args.max_tokens,
-                    items=sorted((log_items), key=lambda x: x["text_llm_input"]),
+                    items=sorted((log_items), key=lambda x: x["text_input"]),
                     atomic_durable=False,
                     atomic_retries=1,
                 )
@@ -521,7 +550,7 @@ def main() -> None:
             )
             for text_input_path, raw_path in bar:
                 rec = _run_one_extraction_job( # 运行单个任务
-                    text_llm_input_path=text_input_path,
+                    text_input_path=text_input_path,
                     raw_output_path=raw_path,
                     system_content=system_content,
                     model_id=model_id,
@@ -533,7 +562,7 @@ def main() -> None:
                 run_results.append(rec)
                 if task_log_path is not None:
                     snap_items = log_items + run_results
-                    snap_items.sort(key=lambda x: x["text_llm_input"])
+                    snap_items.sort(key=lambda x: x["text_input"])
                     write_task_log(
                         task_log_path,
                         started_at=started_at,
@@ -559,7 +588,7 @@ def main() -> None:
                 future_map = {
                     ex.submit(
                         _run_one_extraction_job,
-                        text_llm_input_path=pair[0],
+                        text_input_path=pair[0],
                         raw_output_path=pair[1],
                         system_content=system_content,
                         model_id=model_id,
@@ -583,7 +612,7 @@ def main() -> None:
                     run_results.append(rec)
                     if task_log_path is not None:
                         snap_items = log_items + run_results
-                        snap_items.sort(key=lambda x: x["text_llm_input"])
+                        snap_items.sort(key=lambda x: x["text_input"])
                         write_task_log(
                             task_log_path,
                             started_at=started_at,
@@ -609,7 +638,7 @@ def main() -> None:
     wall_seconds = time.perf_counter() - t_wall0
     finished_at = datetime.now().isoformat(timespec="seconds")
     all_items = log_items + run_results
-    all_items.sort(key=lambda x: x["text_llm_input"])
+    all_items.sort(key=lambda x: x["text_input"])
 
     summary = {"ok": 0, "skipped": 0, "failed": 0}
     for it in all_items:
