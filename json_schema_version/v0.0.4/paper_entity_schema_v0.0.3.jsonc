@@ -84,8 +84,9 @@
       "sequence": null, // 步骤顺序；可为 "0"、"1" 或分支形式如 "5-H90"
       "type": null, // 步骤大类：heat_treatment / thermomechanical_processing / mechanical_processing 等
       "method": null, // 具体方法名，如 forging、annealing、solution treatment
-      "temperature": null, // 温度字符串
-      "unit": null, // 温度单位，如 "°C"、"K"
+      "temperature": { "value": null, // 温度字符串
+        "unit": null // 温度单位，如 "°C"、"K"
+      },
       "duration": null, // 持续时间或保温时间，如 "1 h"
       "cooling_medium": null, // 冷却方式，如 water quenching / air cooling
       "reduction_ratio": null, // 压下量、变形量等

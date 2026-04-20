@@ -53,12 +53,12 @@ if str(_SCRIPTS_DIR) not in sys.path:
 #
 #   Path("/home/caep-xuben/chenchengbing/yzj/datasets/llm_baseline_366/output_text")
 USER_CONFIG_PARSE_INPUT: Path = Path(
-    "/home/caep-xuben/chenchengbing/yzj/datasets/llm_baseline_366/output_text"
+    "/home/caep-xuben/chenchengbing/yzj/experiments/exp_0405/data/raw_data/llm_raw_output"
 )
 #
 # JSON 输出目录（批量时与 raw 文件名组合生成 .json）
 USER_CONFIG_PARSE_OUTPUT_DIR: Path = Path(
-    "/home/caep-xuben/chenchengbing/yzj/datasets/llm_baseline_366/final_json"
+    "/home/caep-xuben/chenchengbing/yzj/experiments/exp_0405/data/raw_data/final_json"
 )
 #
 # 过程日志 / 失败清单：设为 None 表示每次运行自动生成带时间戳的文件（在 output_dir/parse_text_raw_logs/）
